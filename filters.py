@@ -8,13 +8,16 @@ from PIL import Image, ImageFilter
 ## lowpass filter is to smooth the image to reduce noise and minor details
 
 def LowpassFilter(photo):
-    image = Image.open(photo)
-    image = image.filter(ImageFilter.GaussianBlur)
-    return image
+    photo = Image.open(photo)
+    photo = photo.filter(ImageFilter.GaussianBlur)
+    return photo
 
 
 # highpass filter is to extract edges and details from original photo
 def HighpassFilter(photo):
+    photo = Image.open(photo)
+        
+
     return
 
 
