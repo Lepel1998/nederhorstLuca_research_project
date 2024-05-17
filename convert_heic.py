@@ -1,19 +1,29 @@
-# convert HEIC image to other compatible format
-import pyheif
+# Convert heic image to jpg image
+import os
+import io
 from PIL import Image
+from pillow_heif import register_heif_opener
+import csv
+from csv import DictWriter
+import shutil
 
-def ConvertImage(photo_path):
+register_heif_opener()
 
-    heif_photo = pyheif.read(photo_path)
+
+def ConvertHeicJpg(heic_folder):
+    # Iterate through files in the folder
+    for heic_image in os.listdir(heic_folder):
+        if heic_image.lower().endswith('.heic'):
+            # Construct paths for the HEIC and JPG files
+            heic_file_path = os.path.join(heic_folder, heic_image)
+            jpg_file_path = os.path.join(heic_folder, heic_image.replace('.HEIC', '.jpg'))
+       
+            # Replace the HEIC file with the JPG file
+            shutil.move(heic_file_path, jpg_file_path )
+            print(f"Replaced {heic_image} with {heic_image.replace('.HEIC', '.jpg')}")
+
+
+
+
+
     
-    photo = Image.frombytes(
-        heif_photo.mode,
-        heif_photo.size,
-        heif_photo.data,
-        "raw",
-        heif_photo.mode,
-        heif_photo.stride,
-    )
-
-    jpeg_photo_path = 'converted_photo.jpg'
-    return jpeg_photo_path
