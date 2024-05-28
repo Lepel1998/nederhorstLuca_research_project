@@ -31,6 +31,7 @@ all_data_folder_path = "C:/Users/luca-/Documents/Forensic Science/year 2/Researc
 # create augmentated directory which has same buildup as original directory
 if not os.path.exists("C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset"):
     shutil.copytree(all_data_folder_path, "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset", ignore = IgnoreFiles)
+         
 augment_data_folder_path = "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset"
 
 # see all species folders in all data folder
@@ -55,19 +56,24 @@ for specie in species:
 
             # Lowpass filter to smoothen photo en reduce noise
             lowpass_filtered_photo = LowpassFilter(photo_path, 4)
-            
+
             # Highpass filter to sharpen filtered photo
             #highpass_filtered_photo = HighpassFilter(photo_path, lowpass_filtered_photo)
             
-            # Augmentate pictures and save to directory
-            resized_photo, rot90, rot180, rot270, randomcrop, centercrop, rot90flip, rot180flip, rot270flip = Augmentation(lowpass_filtered_photo)
-            augment_path = os.path.join(augment_data_folder_path, specie, photo)
-            resized_photo.save(augment_path)
-            rot90.save(augment_path)
+            # Augmentate pictures
+            augmentations = Augmentation(lowpass_filtered_photo)
+            augmentation_names = ["resized", "rot90", "rot190", "rot270", "randomcrop", "centercrop", "rot90flip", "rot180flip", "rot270flip"]
 
-            # add metadata to annotatin file
-            metadata_photo = {'specie_folder_path': {photo_path} ,'species_id': {photo}}
-            metadata.append(metadata_photo)
+            # Save augmented pictures
+            for augmentation in range(len(augmentations)):
+                 augment_path = os.path.join(augment_data_folder_path, specie, f"{augmentation_names[augmentation]} {photo}" )
+
+                 # save augmented pictures to folder
+                 augmentations[augmentation].save(augment_path)
+
+                 # add metadata augmented pictures to annotation file
+                 metadata_photo = {'augment_specie_folder_path': {augment_path}, 'species_id': {photo}, 'augmentation': {augmentation_names[augmentation]}}
+                 metadata.append(metadata_photo)
 
 # create csv file and reader object to read CSV file
 csv_file = 'metadata_model.csv'
@@ -75,7 +81,7 @@ csv_reader = csv.reader(csv_file)
 
 # put metadata in csv file
 with open(csv_file, 'a', newline='') as file:
-    writer = csv.DictWriter(file, fieldnames=["specie_folder_path", "species_id"])
+    writer = csv.DictWriter(file, fieldnames=["augment_specie_folder_path", "species_id", "augmentation"])
     writer.writeheader()
     for item in metadata:
         writer.writerow(item)

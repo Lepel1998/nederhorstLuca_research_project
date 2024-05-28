@@ -1,441 +1,181 @@
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{None}
-specie_folder_path,species_id
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#391 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#391.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#392 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#392.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#393 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#393 (2).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#393 (3).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#393.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#394 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#394.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1210.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1211 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1211.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1212 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1212.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#127.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#128.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#129 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#129 (2).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#129.jpg'},{None}
-specie_folder_path,species_id
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#391 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#391.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#392 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#392.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#393 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#393 (2).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#393 (3).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#393.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#394 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Chrysomya Albiceps\\S2#394.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1210.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1211 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1211.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1212 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#1212.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#127.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#128.jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#129 (1).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#129 (2).jpg'},{None}
-{'C:\\Users\\luca-\\Documents\\Forensic Science\\year 2\\Research\\Research Project\\AI\\Photos\\Synthesiomyia Nudiseta\\S1#129.jpg'},{None}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{None}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{None}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Photos\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
-specie_folder_path,species_id
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#391 (1).jpg'},{'S2#391 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#391.jpg'},{'S2#391.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#392 (1).jpg'},{'S2#392 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#392.jpg'},{'S2#392.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393 (1).jpg'},{'S2#393 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393 (2).jpg'},{'S2#393 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393 (3).jpg'},{'S2#393 (3).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#393.jpg'},{'S2#393.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#394 (1).jpg'},{'S2#394 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Chrysomya Albiceps\\\\S2#394.jpg'},{'S2#394.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1210.jpg'},{'S1#1210.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1211 (1).jpg'},{'S1#1211 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1211.jpg'},{'S1#1211.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1212 (1).jpg'},{'S1#1212 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#1212.jpg'},{'S1#1212.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#127.jpg'},{'S1#127.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#128.jpg'},{'S1#128.jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#129 (1).jpg'},{'S1#129 (1).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#129 (2).jpg'},{'S1#129 (2).jpg'}
-{'C:\\\\Users\\\\luca-\\\\Documents\\\\Forensic Science\\\\year 2\\\\Research\\\\Research Project\\\\AI\\\\Dataset\\\\Synthesiomyia Nudiseta\\\\S1#129.jpg'},{'S1#129.jpg'}
+augment_specie_folder_path,species_id,augmentation
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#391 (1).jpg'},{'S2#391 (1).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#391 (1).jpg'},{'S2#391 (1).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#391 (1).jpg'},{'S2#391 (1).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#391 (1).jpg'},{'S2#391 (1).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#391 (1).jpg'},{'S2#391 (1).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#391 (1).jpg'},{'S2#391 (1).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#391 (1).jpg'},{'S2#391 (1).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#391 (1).jpg'},{'S2#391 (1).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#391 (1).jpg'},{'S2#391 (1).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#391.jpg'},{'S2#391.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#391.jpg'},{'S2#391.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#391.jpg'},{'S2#391.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#391.jpg'},{'S2#391.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#391.jpg'},{'S2#391.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#391.jpg'},{'S2#391.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#391.jpg'},{'S2#391.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#391.jpg'},{'S2#391.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#391.jpg'},{'S2#391.jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#392 (1).jpg'},{'S2#392 (1).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#392 (1).jpg'},{'S2#392 (1).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#392 (1).jpg'},{'S2#392 (1).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#392 (1).jpg'},{'S2#392 (1).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#392 (1).jpg'},{'S2#392 (1).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#392 (1).jpg'},{'S2#392 (1).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#392 (1).jpg'},{'S2#392 (1).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#392 (1).jpg'},{'S2#392 (1).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#392 (1).jpg'},{'S2#392 (1).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#392.jpg'},{'S2#392.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#392.jpg'},{'S2#392.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#392.jpg'},{'S2#392.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#392.jpg'},{'S2#392.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#392.jpg'},{'S2#392.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#392.jpg'},{'S2#392.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#392.jpg'},{'S2#392.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#392.jpg'},{'S2#392.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#392.jpg'},{'S2#392.jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#393 (1).jpg'},{'S2#393 (1).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#393 (1).jpg'},{'S2#393 (1).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#393 (1).jpg'},{'S2#393 (1).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#393 (1).jpg'},{'S2#393 (1).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#393 (1).jpg'},{'S2#393 (1).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#393 (1).jpg'},{'S2#393 (1).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#393 (1).jpg'},{'S2#393 (1).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#393 (1).jpg'},{'S2#393 (1).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#393 (1).jpg'},{'S2#393 (1).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#393 (2).jpg'},{'S2#393 (2).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#393 (2).jpg'},{'S2#393 (2).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#393 (2).jpg'},{'S2#393 (2).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#393 (2).jpg'},{'S2#393 (2).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#393 (2).jpg'},{'S2#393 (2).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#393 (2).jpg'},{'S2#393 (2).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#393 (2).jpg'},{'S2#393 (2).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#393 (2).jpg'},{'S2#393 (2).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#393 (2).jpg'},{'S2#393 (2).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#393 (3).jpg'},{'S2#393 (3).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#393 (3).jpg'},{'S2#393 (3).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#393 (3).jpg'},{'S2#393 (3).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#393 (3).jpg'},{'S2#393 (3).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#393 (3).jpg'},{'S2#393 (3).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#393 (3).jpg'},{'S2#393 (3).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#393 (3).jpg'},{'S2#393 (3).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#393 (3).jpg'},{'S2#393 (3).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#393 (3).jpg'},{'S2#393 (3).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#393.jpg'},{'S2#393.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#393.jpg'},{'S2#393.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#393.jpg'},{'S2#393.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#393.jpg'},{'S2#393.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#393.jpg'},{'S2#393.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#393.jpg'},{'S2#393.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#393.jpg'},{'S2#393.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#393.jpg'},{'S2#393.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#393.jpg'},{'S2#393.jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#394 (1).jpg'},{'S2#394 (1).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#394 (1).jpg'},{'S2#394 (1).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#394 (1).jpg'},{'S2#394 (1).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#394 (1).jpg'},{'S2#394 (1).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#394 (1).jpg'},{'S2#394 (1).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#394 (1).jpg'},{'S2#394 (1).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#394 (1).jpg'},{'S2#394 (1).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#394 (1).jpg'},{'S2#394 (1).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#394 (1).jpg'},{'S2#394 (1).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\resized S2#394.jpg'},{'S2#394.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90 S2#394.jpg'},{'S2#394.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot190 S2#394.jpg'},{'S2#394.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270 S2#394.jpg'},{'S2#394.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\randomcrop S2#394.jpg'},{'S2#394.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\centercrop S2#394.jpg'},{'S2#394.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot90flip S2#394.jpg'},{'S2#394.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot180flip S2#394.jpg'},{'S2#394.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Chrysomya Albiceps\\rot270flip S2#394.jpg'},{'S2#394.jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#1210.jpg'},{'S1#1210.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#1210.jpg'},{'S1#1210.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#1210.jpg'},{'S1#1210.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#1210.jpg'},{'S1#1210.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#1210.jpg'},{'S1#1210.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#1210.jpg'},{'S1#1210.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#1210.jpg'},{'S1#1210.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#1210.jpg'},{'S1#1210.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#1210.jpg'},{'S1#1210.jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#1211 (1).jpg'},{'S1#1211 (1).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#1211 (1).jpg'},{'S1#1211 (1).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#1211 (1).jpg'},{'S1#1211 (1).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#1211 (1).jpg'},{'S1#1211 (1).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#1211 (1).jpg'},{'S1#1211 (1).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#1211 (1).jpg'},{'S1#1211 (1).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#1211 (1).jpg'},{'S1#1211 (1).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#1211 (1).jpg'},{'S1#1211 (1).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#1211 (1).jpg'},{'S1#1211 (1).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#1211.jpg'},{'S1#1211.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#1211.jpg'},{'S1#1211.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#1211.jpg'},{'S1#1211.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#1211.jpg'},{'S1#1211.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#1211.jpg'},{'S1#1211.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#1211.jpg'},{'S1#1211.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#1211.jpg'},{'S1#1211.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#1211.jpg'},{'S1#1211.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#1211.jpg'},{'S1#1211.jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#1212 (1).jpg'},{'S1#1212 (1).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#1212 (1).jpg'},{'S1#1212 (1).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#1212 (1).jpg'},{'S1#1212 (1).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#1212 (1).jpg'},{'S1#1212 (1).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#1212 (1).jpg'},{'S1#1212 (1).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#1212 (1).jpg'},{'S1#1212 (1).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#1212 (1).jpg'},{'S1#1212 (1).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#1212 (1).jpg'},{'S1#1212 (1).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#1212 (1).jpg'},{'S1#1212 (1).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#1212.jpg'},{'S1#1212.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#1212.jpg'},{'S1#1212.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#1212.jpg'},{'S1#1212.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#1212.jpg'},{'S1#1212.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#1212.jpg'},{'S1#1212.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#1212.jpg'},{'S1#1212.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#1212.jpg'},{'S1#1212.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#1212.jpg'},{'S1#1212.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#1212.jpg'},{'S1#1212.jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#127.jpg'},{'S1#127.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#127.jpg'},{'S1#127.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#127.jpg'},{'S1#127.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#127.jpg'},{'S1#127.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#127.jpg'},{'S1#127.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#127.jpg'},{'S1#127.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#127.jpg'},{'S1#127.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#127.jpg'},{'S1#127.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#127.jpg'},{'S1#127.jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#128.jpg'},{'S1#128.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#128.jpg'},{'S1#128.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#128.jpg'},{'S1#128.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#128.jpg'},{'S1#128.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#128.jpg'},{'S1#128.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#128.jpg'},{'S1#128.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#128.jpg'},{'S1#128.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#128.jpg'},{'S1#128.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#128.jpg'},{'S1#128.jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#129 (1).jpg'},{'S1#129 (1).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#129 (1).jpg'},{'S1#129 (1).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#129 (1).jpg'},{'S1#129 (1).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#129 (1).jpg'},{'S1#129 (1).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#129 (1).jpg'},{'S1#129 (1).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#129 (1).jpg'},{'S1#129 (1).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#129 (1).jpg'},{'S1#129 (1).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#129 (1).jpg'},{'S1#129 (1).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#129 (1).jpg'},{'S1#129 (1).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#129 (2).jpg'},{'S1#129 (2).jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#129 (2).jpg'},{'S1#129 (2).jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#129 (2).jpg'},{'S1#129 (2).jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#129 (2).jpg'},{'S1#129 (2).jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#129 (2).jpg'},{'S1#129 (2).jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#129 (2).jpg'},{'S1#129 (2).jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#129 (2).jpg'},{'S1#129 (2).jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#129 (2).jpg'},{'S1#129 (2).jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#129 (2).jpg'},{'S1#129 (2).jpg'},{'rot270flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\resized S1#129.jpg'},{'S1#129.jpg'},{'resized'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90 S1#129.jpg'},{'S1#129.jpg'},{'rot90'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot190 S1#129.jpg'},{'S1#129.jpg'},{'rot190'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270 S1#129.jpg'},{'S1#129.jpg'},{'rot270'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\randomcrop S1#129.jpg'},{'S1#129.jpg'},{'randomcrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\centercrop S1#129.jpg'},{'S1#129.jpg'},{'centercrop'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot90flip S1#129.jpg'},{'S1#129.jpg'},{'rot90flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot180flip S1#129.jpg'},{'S1#129.jpg'},{'rot180flip'}
+{'C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset\\Synthesiomyia Nudiseta\\rot270flip S1#129.jpg'},{'S1#129.jpg'},{'rot270flip'}
