@@ -9,12 +9,13 @@ from csv import DictWriter
 from convert_heic import ConvertHeicJpg
 from filters import LowpassFilter, HighpassFilter
 from augmentate import Augmentation
-
+from ignore_files import IgnoreFiles
 import shutil
 register_heif_opener()
 import cv2
 import numpy as np
 import re
+import shutil
 
 
 
@@ -25,7 +26,12 @@ import re
 
 
 # load images and store in directory which is named after the class (in our case insect species)
-all_data_folder_path = "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Photos"
+all_data_folder_path = "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Dataset"
+
+# create augmentated directory which has same buildup as original directory
+if not os.path.exists("C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset"):
+    shutil.copytree(all_data_folder_path, "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset", ignore = IgnoreFiles)
+augment_data_folder_path = "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset"
 
 # see all species folders in all data folder
 species = os.listdir(all_data_folder_path)
@@ -48,13 +54,16 @@ for specie in species:
             photo_path = photo_path.replace("\\", "\\\\")
 
             # Lowpass filter to smoothen photo en reduce noise
-            #lowpass_filtered_photo = LowpassFilter(photo_path, 4)
+            lowpass_filtered_photo = LowpassFilter(photo_path, 4)
             
             # Highpass filter to sharpen filtered photo
             #highpass_filtered_photo = HighpassFilter(photo_path, lowpass_filtered_photo)
             
-            # Augmentate pictures
-            Augmentation(photo_path)
+            # Augmentate pictures and save to directory
+            resized_photo, rot90, rot180, rot270, randomcrop, centercrop, rot90flip, rot180flip, rot270flip = Augmentation(lowpass_filtered_photo)
+            augment_path = os.path.join(augment_data_folder_path, specie, photo)
+            resized_photo.save(augment_path)
+            rot90.save(augment_path)
 
             # add metadata to annotatin file
             metadata_photo = {'specie_folder_path': {photo_path} ,'species_id': {photo}}

@@ -19,7 +19,6 @@ register_heif_opener()
 def LowpassFilter(photo_path, radius):
     photo = Image.open(photo_path)
     lowpass_filtered_photo = photo.filter(ImageFilter.GaussianBlur(radius))
-    lowpass_filtered_photo.show()
     return lowpass_filtered_photo
 
 ## highpass filter is to sharpen the picture
