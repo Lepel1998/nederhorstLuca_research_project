@@ -59,11 +59,10 @@ for specie in species:
         lowpass_filtered_photo = lowpass_filter(photo_path, 4)
 
         """ Highpass filter to sharpen filtered photo """
-        highpass_filtered_photo = highpass_filter(photo_path,
-                                                  lowpass_filtered_photo)
+        #highpass_filtered_photo = highpass_filter(photo_path, lowpass_filtered_photo)
 
         """ Augmentate pictures """
-        augmentations = augmentation_function(highpass_filtered_photo)
+        augmentations = augmentation_function(lowpass_filtered_photo)
         augmentation_names = ["resized",
                               "rot90",
                               "rot190",
