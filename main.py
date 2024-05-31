@@ -20,29 +20,32 @@ register_heif_opener()
 
 
 # load images and store in directory which is named after the class
-ALL_DATA_FOLDER_PATH = "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Dataset"
+current_directory = os.getcwd()
+DATA_FOLDER_PATH = os.path.join(current_directory, 'dataset')
+DATA_FOLDER_PATH = os.path.normpath(DATA_FOLDER_PATH).replace("\\", "/")
+
 
 # create augmentated directory which has same buildup as original directory
-if not os.path.exists("C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset"):
-    shutil.copytree(ALL_DATA_FOLDER_PATH, "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset", ignore=ignore_files)
+if not os.path.exists(os.path.join(current_directory, 'processed_dataset')):
+    shutil.copytree(DATA_FOLDER_PATH, os.path.join(current_directory, 'processed_dataset'), ignore=ignore_files)
 else:
-    for folder in os.listdir("C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset"):
-        folder_path = os.path.join("C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset", folder)
+    for folder in os.listdir(os.path.join(current_directory, 'processed_dataset')):
+        folder_path = os.path.join(os.path.join(current_directory, 'processed_dataset'), folder)
         folder_path = os.path.normpath(folder_path)
         folder = os.listdir(folder_path)
         for photo in folder:
             photo_path = os.path.join(folder_path, photo)
             os.remove(photo_path)
 
-AUGMENT_DATA_FOLDER_PATH = "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset"
+AUGMENT_DATA_FOLDER_PATH = os.path.join(current_directory, 'processed_dataset')
 
 # see all species folders in all data folder
-species = os.listdir(ALL_DATA_FOLDER_PATH)
+species = os.listdir(DATA_FOLDER_PATH)
 
 # go over photo inside species folder and add to annotation file called csvfile
 metadata = []
 for specie in species:
-    specie_folder_path = os.path.join(ALL_DATA_FOLDER_PATH, specie)
+    specie_folder_path = os.path.join(DATA_FOLDER_PATH, specie)
     specie_folder_path = os.path.normpath(specie_folder_path)
 
     specie_folder = os.listdir(specie_folder_path)
