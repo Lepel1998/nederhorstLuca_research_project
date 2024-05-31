@@ -10,6 +10,7 @@ import os
 import shutil
 from random import randrange
 from PIL import Image, ImageFilter, ImageChops  # type: ignore
+import cv2  # type: ignore
 
 
 def augmentation_function(photo):
@@ -87,3 +88,22 @@ def lowpass_filter(photo_path, radius):
     photo = Image.open(photo_path)
     lowpass_filtered_photo = photo.filter(ImageFilter.GaussianBlur(radius))
     return lowpass_filtered_photo
+
+
+def feature_extraction(photo_path):
+    """ 
+        Wen, C., & Guyer, D. (2012). Image-based orchard insect automated 
+        identification and classification method. Computers and electronics 
+        in agriculture, 89, 110-115.
+    """
+    # image acquisition and preprocessing, preserve brightness by making gray
+    
+    # segmentation (edge detection) - Thenmozhi uses Sobel filter, we cannot bc only on Linux or Ubuntu systems, therefore Canny edge detection)
+    
+
+    # shape feature extraction includes 9 geometric shape features
+
+
+    # insect shape detection
+
+    return

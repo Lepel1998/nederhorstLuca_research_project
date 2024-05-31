@@ -9,7 +9,7 @@ import os
 import csv
 import shutil
 from pillow_heif import register_heif_opener  # type: ignore
-from functions import augmentation_function, convert_heic_jpg, highpass_filter, ignore_files, lowpass_filter
+from functions import augmentation_function, convert_heic_jpg, feature_extraction, highpass_filter, ignore_files, lowpass_filter
 
 # register HEIF opener
 register_heif_opener()
@@ -57,6 +57,7 @@ for specie in species:
         photo_path = os.path.join(specie_folder_path, photo)
         photo_path = os.path.normpath(photo_path)
         photo_path = photo_path.replace("\\", "\\\\")
+        #feature_extraction(photo_path)
 
         """ Lowpass filter to smoothen photo en reduce noise """
         lowpass_filtered_photo = lowpass_filter(photo_path, 4)

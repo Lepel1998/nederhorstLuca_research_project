@@ -2,7 +2,7 @@
 Module: Convolutional Neural Network using Tensorflow Keras API
 
 This module contains the set-up of the model using Keras API.
-Leading code followed https://www.youtube.com/watch?v=jztwpsIzEGc&t=300s
+Leading code followed https://www.youtube.com/watch?v=jztwpsIzEGc&t=300s 
 
 """
 
@@ -73,12 +73,12 @@ model = Sequential([
     Flatten(),
 
     Dense(64, activation='relu'),
-    Dense(1, activation='sigmoid')
+    Dense(1, activation='sigmoid') # change sigmud to softmax
 ])
 
 
 # adam is optimizer (there are a tons of optimizers)
-model.compile('adam', loss = tf.losses.BinaryCrossentropy(), metrics=['accuracy'])
+model.compile('adam', loss = tf.losses.BinaryCrossentropy(), metrics=['accuracy']) # change BinaryCrossentropy to CatergicalCrossentropy
 model.summary()
 
 # training of the model and save process
