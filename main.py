@@ -57,13 +57,15 @@ for specie in species:
         photo_path = os.path.join(specie_folder_path, photo)
         photo_path = os.path.normpath(photo_path)
         photo_path = photo_path.replace("\\", "\\\\")
-        #feature_extraction(photo_path)
 
         """ Lowpass filter to smoothen photo en reduce noise """
         lowpass_filtered_photo = lowpass_filter(photo_path, 4)
 
         """ Highpass filter to sharpen filtered photo """
         #highpass_filtered_photo = highpass_filter(photo_path, lowpass_filtered_photo)
+
+        """ here should be the feature extracten (after augmentation and blurring) """
+        feature_extraction(photo_path)
 
         """ Augmentate pictures """
         augmentations = augmentation_function(lowpass_filtered_photo)
