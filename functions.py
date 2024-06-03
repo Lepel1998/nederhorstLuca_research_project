@@ -105,7 +105,7 @@ def lowpass_filter(photo_path, radius):
     return lowpass_filtered_photo
 
 
-def feature_extraction(photo_path):
+def geometric_feature(photo_path):
     """ 
         Wen, C., & Guyer, D. (2012). Image-based orchard insect automated 
         identification and classification method. Computers and electronics 
@@ -114,9 +114,8 @@ def feature_extraction(photo_path):
     """
 
     # load and convert image to HSV 
-    photo = Image.open(photo_path)
-    photo = np.array(photo)
-    hsv_photo = rgb2hsv(photo)
+    photo = cv2.imread(photo_path)
+    hsv_photo = cv2.cvtColor(photo, cv2.COLOR_BGR2HSV)
 
     # K-means clustering to segment the insect
     # the variable hue is a column vector containing the hue values of all pixels in the image
@@ -156,32 +155,10 @@ def feature_extraction(photo_path):
 
         geometric_features_list.append(feature.eccentricity)
         geometric_features_list.append(feature.major_axis_length)
+
         geometric_features_list.append(feature.minor_axis_length)
         geometric_features_list.append(feature.convex_area)
         geometric_features_list.append(feature.solidity)
         geometric_features_list.append(feature.equivalent_diameter_area)
-        print('hi')
-    
-    print(geometric_features_list)
-
-    ## Contour features Zhang and Lu, 2001)
-
-    ## Invariant moments
-
-    ## Texture features
-
-    ## Color features
-
-
-
-
-
-    plt.imshow(cleaned_binary_photo, cmap='viridis')
-    plt.colorbar()
-    plt.show()
-
-
-    #plt.imshow(hsv_photo)
-    #plt.show()
    
-    return
+    return geometric_features_list

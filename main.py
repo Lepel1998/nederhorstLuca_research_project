@@ -9,7 +9,7 @@ import os
 import csv
 import shutil
 from pillow_heif import register_heif_opener  # type: ignore
-from functions import augmentation_function, convert_heic_jpg, feature_extraction, highpass_filter, ignore_files, lowpass_filter
+from functions import augmentation_function, convert_heic_jpg, geometric_feature, highpass_filter, ignore_files, lowpass_filter
 
 # register HEIF opener
 register_heif_opener()
@@ -64,9 +64,6 @@ for specie in species:
         """ Highpass filter to sharpen filtered photo """
         #highpass_filtered_photo = highpass_filter(photo_path, lowpass_filtered_photo)
 
-        """ here should be the feature extracten (after augmentation and blurring) """
-        feature_extraction(photo_path)
-
         """ Augmentate pictures """
         augmentations = augmentation_function(lowpass_filtered_photo)
         augmentation_names = ["resized",
@@ -86,9 +83,22 @@ for specie in species:
                                         f"{augmentation_names[augmentation]} {photo}")
             augment_data.save(augment_path)
 
+            """ feature extraction of augmented and blurred pictures """
+            geometric_features = geometric_feature(augment_path)
+            
             metadata_photo = {'augment_specie_folder_path': {augment_path},
                               'species_id': {photo},
-                              'augmentation': {augmentation_names[augmentation]}}
+                              'augmentation': {augmentation_names[augmentation]},
+                              'area':{geometric_features[0]},
+                              'perimeter':{geometric_features[1]},
+                              'circularity_ratio':{geometric_features[2]},
+                              'eccentricity': {geometric_features[3]},
+                              'major_axis_length':{geometric_features[4]},
+                              'minor_axis_length':{geometric_features[5]},
+                              'convex_area':{geometric_features[6]},
+                              'solidity':{geometric_features[7]},
+                              'equivalent_diameter_area':{geometric_features[8]}
+                            }
             metadata.append(metadata_photo)
 
 # create csv file and reader object to read CSV file
@@ -98,7 +108,17 @@ CSV_FILE = 'metadata_model.csv'
 with open(CSV_FILE, 'a', newline='', encoding="utf-8") as file:
     writer = csv.DictWriter(file, fieldnames=["augment_specie_folder_path",
                                               "species_id",
-                                              "augmentation"])
+                                              "augmentation",
+                                              'area',
+                                              'perimeter',
+                                              'circularity_ratio',
+                                              'eccentricity',
+                                              'major_axis_length',
+                                              'minor_axis_length',
+                                              'convex_area',
+                                              'solidity',
+                                              'equivalent_diameter_area'
+                                              ])
     writer.writeheader()
     for item in metadata:
         writer.writerow(item)
