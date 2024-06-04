@@ -9,7 +9,7 @@ import os
 import csv
 import shutil
 from pillow_heif import register_heif_opener  # type: ignore
-from functions import augmentation_function, convert_heic_jpg, geometric_feature, highpass_filter, ignore_files, lowpass_filter, fourier, invariant_moments, texture
+from functions import augmentation_function, convert_heic_jpg, geometric_feature, highpass_filter, ignore_files, lowpass_filter, fourier, invariant_moments, texture, color
 
 # register HEIF opener
 register_heif_opener()
@@ -88,7 +88,7 @@ for specie in species:
             spatial_frequencies = fourier(augment_path)
             hu_moments = invariant_moments(augment_path)
             texture_features = texture(augment_path)
-            print(f'contrast:{texture_features[0]}')
+            color_features = color(augment_path)
 
             # put metadata of image in file
             metadata_photo = {'augment_specie_folder_path': {augment_path},
@@ -118,6 +118,16 @@ for specie in species:
                                 'energy':{texture_features[3]},
                                 'correlation':{texture_features[4]},
                                 'ASM':{texture_features[5]},
+                                'mean_hue_hsv':{color_features[0]},
+                                'std_hue_hsv':{color_features[1]},
+                                'mean_sat_hsv':{color_features[2]},
+                                'std_sat_hsv':{color_features[3]},
+                                'mean_hue_LCH':{color_features[4]},
+                                'std_hue_LCH':{color_features[5]},
+                                'mean_sat_LCH':{color_features[6]},
+                                'std_sat_LCH':{color_features[7]},
+                                'mean_luminance':{color_features[8]},
+                                'std_sat_lab':{color_features[9]},
                             }
             metadata.append(metadata_photo)
 
@@ -153,6 +163,16 @@ with open(CSV_FILE, 'a', newline='', encoding="utf-8") as file:
                                               'energy',
                                               'correlation',
                                               'ASM',
+                                              'mean_hue_hsv',
+                                              'std_hue_hsv',
+                                              'mean_sat_hsv',
+                                              'std_sat_hsv',
+                                              'mean_hue_LCH',
+                                              'std_hue_LCH',
+                                              'mean_sat_LCH',
+                                              'std_sat_LCH',
+                                              'mean_luminance',
+                                              'std_sat_lab',
                                               ])
     writer.writeheader()
     for item in metadata:
