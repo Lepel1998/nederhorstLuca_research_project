@@ -154,7 +154,7 @@ def geometric_feature(photo_path):
         perimeter = feature.perimeter
         geometric_features_list.append(feature.perimeter)
 
-        circularity_ratio = (4*np.pi*area/perimeter**2) 
+        circularity_ratio = (4*np.pi*area/((perimeter**2)+1)) 
         geometric_features_list.append(circularity_ratio) 
 
         geometric_features_list.append(feature.eccentricity)
@@ -185,7 +185,7 @@ def fourier(photo_path):
 
     # detecting the contours in an image
     contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    #print(f'Number of contours found = {format(len(contours))}')
+    print(f'Number of contours found = {format(len(contours))}')
 
     # read coloured image in for drawing the contours (otherwise the lines will be drawed in white)
     #cv2.drawContours(img, contours, -1, (0,255,0),1)
@@ -197,6 +197,11 @@ def fourier(photo_path):
     # fourier transformation (https://docs.opencv.org/4.x/de/dbc/tutorial_py_fourier_transform.html)
     # contour = max(contours, key=cv2.contourArea)
     contour = max(contours, key=cv2.contourArea)
+    print(f'Number of contour after max area function = {format(len(contour))}')
+    #cv2.drawContours(img, contour, -1, (0,255,0), 5)
+    #plt.imshow(img[:,:,::-1])
+    #plt.show()
+
     fourier_contour = np.fft.fft2(contour)
     fourier_shift = np.fft.fftshift(fourier_contour)
     magnitude_spectrum = 20*np.log(np.abs(fourier_shift))
@@ -218,7 +223,7 @@ def minimum_rectangle_image(photo_path):
     """
 
     img = cv2.imread(photo_path)
-    img = cv2.GaussianBlur(img, (5,5), 0)
+    #img = cv2.GaussianBlur(img, (5,5), 0)
     binary = binary_image(img)
 
     # get contours
@@ -228,7 +233,8 @@ def minimum_rectangle_image(photo_path):
 
     # get coordinates of minimum bounding rectangle
     if len(contours) > 0:
-        contour = contours[0]
+        contour = max(contours, key=cv2.contourArea)
+        print(f'Number of contour after max area function = {format(len(contour))}')
 
         x, y, w, h = cv2.boundingRect(contour)
 
@@ -237,9 +243,9 @@ def minimum_rectangle_image(photo_path):
         rectangle_image = img[y:y+h, x:x+w]
 
         # display original image with rectangle
-        #plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-        #plt.title('Ímage with bounding Rectangle')
-        #plt.show()
+        plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        plt.title('Ímage with bounding Rectangle')
+        plt.show()
 
         if rectangle_image.size > 0:
             #plt.imshow(rectangle_image)
