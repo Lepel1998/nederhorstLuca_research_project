@@ -105,6 +105,21 @@ def lowpass_filter(photo_path, radius):
     return lowpass_filtered_photo
 
 
+def binary_image(img):
+    
+    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    gray_img = cv2.GaussianBlur(gray_img, (5,5), 0)
+
+    # you need to invert image 
+    gray_inverted = cv2.bitwise_not(gray_img)
+
+    # make image fully black and white with cv2.threshold()
+    _,binary = cv2.threshold(gray_inverted, 40, 255, cv2.THRESH_BINARY)
+
+    return binary
+
+
+
 def geometric_feature(photo_path):
     """ 
         Wen, C., & Guyer, D. (2012). Image-based orchard insect automated 
@@ -162,3 +177,47 @@ def geometric_feature(photo_path):
         geometric_features_list.append(feature.equivalent_diameter_area)
    
     return geometric_features_list
+
+
+def fourier(photo_path):
+    """
+    https://www.youtube.com/watch?v=JfaZNiEbreE&list=PLCeWwpzjQu9gc9C9-iZ9WTFNGhIq4-L1X
+    """
+
+    # load image
+    img = cv2.imread(photo_path)
+
+    # get binary image
+    binary = binary_image(img)
+
+    # show binary image
+    plt.imshow(binary, cmap='gray')
+
+    # detecting the contours in an image
+    contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    print(f'Number of contours found = {format(len(contours))}')
+
+    # read coloured image in for drawing the contours (otherwise the lines will be drawed in white)
+    cv2.drawContours(img, contours, -1, (0,255,0),1)
+    plt.figure(figsize=[10,10])
+    plt.imshow(img[:,:,::-1])
+    plt.axis("off")
+    plt.show()
+
+    # fourier transformation (https://docs.opencv.org/4.x/de/dbc/tutorial_py_fourier_transform.html)
+    # contour = max(contours, key=cv2.contourArea)
+    contour = max(contours, key=cv2.contourArea)
+    fourier_contour = np.fft.fft2(contour)
+    fourier_shift = np.fft.fftshift(fourier_contour)
+    magnitude_spectrum = 20*np.log(np.abs(fourier_shift))
+
+    magnitude_spectrum_first_two_spat_freq = magnitude_spectrum[:2]
+
+    spat_freq_1 = magnitude_spectrum_first_two_spat_freq[0][0][0]
+    spat_freq_2 = magnitude_spectrum_first_two_spat_freq[0][0][1]
+    print(spat_freq_1, spat_freq_2)
+
+    return spat_freq_1, spat_freq_2
+
+
+

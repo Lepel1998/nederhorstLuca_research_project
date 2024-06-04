@@ -9,7 +9,7 @@ import os
 import csv
 import shutil
 from pillow_heif import register_heif_opener  # type: ignore
-from functions import augmentation_function, convert_heic_jpg, geometric_feature, highpass_filter, ignore_files, lowpass_filter
+from functions import augmentation_function, convert_heic_jpg, geometric_feature, highpass_filter, ignore_files, lowpass_filter, fourier
 
 # register HEIF opener
 register_heif_opener()
@@ -85,7 +85,8 @@ for specie in species:
 
             """ feature extraction of augmented and blurred pictures """
             geometric_features = geometric_feature(augment_path)
-            
+            #spatial_frequencies = fourier(augment_path)
+
             metadata_photo = {'augment_specie_folder_path': {augment_path},
                               'species_id': {photo},
                               'augmentation': {augmentation_names[augmentation]},
@@ -97,7 +98,7 @@ for specie in species:
                               'minor_axis_length':{geometric_features[5]},
                               'convex_area':{geometric_features[6]},
                               'solidity':{geometric_features[7]},
-                              'equivalent_diameter_area':{geometric_features[8]}
+                              'equivalent_diameter_area':{geometric_features[8]},
                             }
             metadata.append(metadata_photo)
 
