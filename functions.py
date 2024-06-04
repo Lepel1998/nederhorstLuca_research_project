@@ -25,6 +25,9 @@ import matplotlib.pyplot as plt
 from skimage.measure import regionprops, find_contours
 #from skimage.feature import greycomatrix, greycoprops
 from skimage.transform import resize
+from skimage import measure
+from skimage.feature import graycomatrix, graycoprops
+
 
 
 
@@ -100,6 +103,7 @@ def ignore_files(directory, files):
 
 def lowpass_filter(photo_path, radius):
     """ Lowpass Gaussian filter to smoothen image/reduce noisee (Makander & Halalli (2015) """
+
     photo = Image.open(photo_path)
     lowpass_filtered_photo = photo.filter(ImageFilter.GaussianBlur(radius))
     return lowpass_filtered_photo
@@ -108,16 +112,14 @@ def lowpass_filter(photo_path, radius):
 def binary_image(img):
     
     gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    gray_img = cv2.GaussianBlur(gray_img, (5,5), 0)
 
     # you need to invert image 
     gray_inverted = cv2.bitwise_not(gray_img)
 
     # make image fully black and white with cv2.threshold()
-    _,binary = cv2.threshold(gray_inverted, 40, 255, cv2.THRESH_BINARY)
+    _,binary = cv2.threshold(gray_inverted, 90, 255, cv2.THRESH_BINARY)
 
     return binary
-
 
 
 def geometric_feature(photo_path):
@@ -130,35 +132,22 @@ def geometric_feature(photo_path):
 
     # load and convert image to HSV 
     photo = cv2.imread(photo_path)
-    hsv_photo = cv2.cvtColor(photo, cv2.COLOR_BGR2HSV)
+    binary = binary_image(photo)
+    #plt.imshow(binary, cmap='gray')
+    #plt.show()
 
-    # K-means clustering to segment the insect
-    # the variable hue is a column vector containing the hue values of all pixels in the image
-    # each element in this vector represents the hue value of a pixel
-    # there are two labels, the background and object (insect)
-    hue = hsv_photo[:,:,0].reshape(-1,1)
-    kmeans = KMeans(n_clusters=3)
-    kmeans = kmeans.fit(hue)
-    labels = kmeans.labels_.reshape(hsv_photo.shape[:2])
+    # label the foreground object and exclude background (foreground is 1, background is 0)
+    number_labels, labels_binary = cv2.connectedComponents(binary)
+    labels_binary = labels_binary.astype(np.uint8)
 
-    # label the clusters (foreground and background), binary photo is the photo consist of foreground and background
-    if np.sum(labels==0) < np.sum(labels==1):
-        insect_label=0
-    else:
-        insect_label=1
-    
-    # create binary image where pixels corresponding to the insect are set to 1
-    binary_photo = np.zeros_like(labels, dtype=np.uint8)
-    binary_photo[labels==insect_label]=1
-   
-    # clean the image from noise
-    cleaned_binary_photo = binary_opening(binary_photo, structure=np.ones((3,3))).astype(np.uint8)
+    # get features from photo for regions
+    features = measure.regionprops(labels_binary)
 
-    # get features from photo
     ## Geometric features (Wen et al., 2009a,b)
     geometric_features_list = []
-
-    for feature in regionprops(cleaned_binary_photo.astype(int)):
+    for feature in features:
+        if feature.label==0:
+            continue
         area = feature.area
         geometric_features_list.append(feature.area)
 
@@ -175,7 +164,8 @@ def geometric_feature(photo_path):
         geometric_features_list.append(feature.convex_area)
         geometric_features_list.append(feature.solidity)
         geometric_features_list.append(feature.equivalent_diameter_area)
-   
+        #print('Area:', area)
+
     return geometric_features_list
 
 
@@ -191,18 +181,18 @@ def fourier(photo_path):
     binary = binary_image(img)
 
     # show binary image
-    plt.imshow(binary, cmap='gray')
+    #plt.imshow(binary, cmap='gray')
 
     # detecting the contours in an image
     contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     print(f'Number of contours found = {format(len(contours))}')
 
     # read coloured image in for drawing the contours (otherwise the lines will be drawed in white)
-    cv2.drawContours(img, contours, -1, (0,255,0),1)
-    plt.figure(figsize=[10,10])
-    plt.imshow(img[:,:,::-1])
-    plt.axis("off")
-    plt.show()
+    #cv2.drawContours(img, contours, -1, (0,255,0),1)
+    #plt.figure(figsize=[10,10])
+    #plt.imshow(img[:,:,::-1])
+    #plt.axis("off")
+    #plt.show()
 
     # fourier transformation (https://docs.opencv.org/4.x/de/dbc/tutorial_py_fourier_transform.html)
     # contour = max(contours, key=cv2.contourArea)
@@ -215,9 +205,92 @@ def fourier(photo_path):
 
     spat_freq_1 = magnitude_spectrum_first_two_spat_freq[0][0][0]
     spat_freq_2 = magnitude_spectrum_first_two_spat_freq[0][0][1]
-    print(spat_freq_1, spat_freq_2)
+    #print(spat_freq_1, spat_freq_2)
 
     return spat_freq_1, spat_freq_2
 
 
 
+
+def minimum_rectangle_image(photo_path):
+    """
+        https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+    """
+
+    img = cv2.imread(photo_path)
+    img = cv2.GaussianBlur(img, (5,5), 0)
+    binary = binary_image(img)
+
+    # get contours
+    contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    print(f'amount of contours found {len(contours)}')
+
+    # get coordinates of minimum bounding rectangle
+    if len(contours) > 0:
+        contour = contours[0]
+
+        x, y, w, h = cv2.boundingRect(contour)
+
+        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
+
+        rectangle_image = img[y:y+h, x:x+w]
+
+        # display original image with rectangle
+        #plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        #plt.title('Ímage with bounding Rectangle')
+        #plt.show()
+
+        if rectangle_image.size > 0:
+            #plt.imshow(rectangle_image)
+            #plt.title('Extracted Bouding Rectangle')
+            #plt.show()
+            pass
+        else:
+            print('Rectangle image is empty')
+    else:
+        print('No contours found.')
+    return rectangle_image
+
+
+def invariant_moments(photo_path):
+    """
+    https://www.tutorialspoint.com/how-to-compute-hu-moments-of-an-image-in-opencv-python
+    """
+    rect_image = minimum_rectangle_image(photo_path)
+    gray_rect_image = cv2.cvtColor(rect_image, cv2.COLOR_BGR2GRAY)
+
+    moments = cv2.moments(gray_rect_image)
+    hu_moments = cv2.HuMoments(moments)
+    
+    return hu_moments[0][0], hu_moments[1][0], hu_moments[2][0], hu_moments[3][0], hu_moments[4][0], hu_moments[5][0], hu_moments[6][0]
+
+
+def texture(photo_path):
+    """
+    took avarage of texture features to add it to the csv file
+    """
+
+    image = cv2.imread(photo_path, cv2.IMREAD_GRAYSCALE)
+
+    # computer gray level co occurence
+    distances=[1]
+    angles=[0, np.pi/4,np.pi/2, 3*np.pi/4]
+    gray_level_co_occurence = graycomatrix(image, distances, angles)
+
+    # extract texture props of the GLCM
+    contrast = graycoprops(gray_level_co_occurence, 'contrast')
+    dissimilarity = graycoprops(gray_level_co_occurence, 'dissimilarity')
+    homogeneity = graycoprops(gray_level_co_occurence, 'homogeneity')
+    energy = graycoprops(gray_level_co_occurence, 'energy')
+    correlation = graycoprops(gray_level_co_occurence,'correlation')
+    ASM = graycoprops(gray_level_co_occurence, 'ASM')
+
+    mean_contrast = contrast[0].mean(axis=0)
+    mean_dissimilarity = dissimilarity[0].mean(axis=0)
+    mean_homogeneity = homogeneity[0].mean(axis=0)
+    mean_energy = energy[0].mean(axis=0)
+    mean_correlation = correlation[0].mean(axis=0)
+    mean_ASM = ASM[0].mean(axis=0)
+
+    return mean_contrast, mean_dissimilarity, mean_homogeneity, mean_energy, mean_correlation, mean_ASM

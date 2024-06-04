@@ -9,7 +9,7 @@ import os
 import csv
 import shutil
 from pillow_heif import register_heif_opener  # type: ignore
-from functions import augmentation_function, convert_heic_jpg, geometric_feature, highpass_filter, ignore_files, lowpass_filter, fourier
+from functions import augmentation_function, convert_heic_jpg, geometric_feature, highpass_filter, ignore_files, lowpass_filter, fourier, invariant_moments, texture
 
 # register HEIF opener
 register_heif_opener()
@@ -59,7 +59,7 @@ for specie in species:
         photo_path = photo_path.replace("\\", "\\\\")
 
         """ Lowpass filter to smoothen photo en reduce noise """
-        lowpass_filtered_photo = lowpass_filter(photo_path, 4)
+        lowpass_filtered_photo = lowpass_filter(photo_path, 5)
 
         """ Highpass filter to sharpen filtered photo """
         #highpass_filtered_photo = highpass_filter(photo_path, lowpass_filtered_photo)
@@ -85,20 +85,39 @@ for specie in species:
 
             """ feature extraction of augmented and blurred pictures """
             geometric_features = geometric_feature(augment_path)
-            #spatial_frequencies = fourier(augment_path)
+            spatial_frequencies = fourier(augment_path)
+            hu_moments = invariant_moments(augment_path)
+            texture_features = texture(augment_path)
+            print(f'contrast:{texture_features[0]}')
 
+            # put metadata of image in file
             metadata_photo = {'augment_specie_folder_path': {augment_path},
-                              'species_id': {photo},
-                              'augmentation': {augmentation_names[augmentation]},
-                              'area':{geometric_features[0]},
-                              'perimeter':{geometric_features[1]},
-                              'circularity_ratio':{geometric_features[2]},
-                              'eccentricity': {geometric_features[3]},
-                              'major_axis_length':{geometric_features[4]},
-                              'minor_axis_length':{geometric_features[5]},
-                              'convex_area':{geometric_features[6]},
-                              'solidity':{geometric_features[7]},
-                              'equivalent_diameter_area':{geometric_features[8]},
+                                'species_id': {photo},
+                                'augmentation': {augmentation_names[augmentation]},
+                                'area':{geometric_features[0]},
+                                'perimeter':{geometric_features[1]},
+                                'circularity_ratio':{geometric_features[2]},
+                                'eccentricity': {geometric_features[3]},
+                                'major_axis_length':{geometric_features[4]},
+                                'minor_axis_length':{geometric_features[5]},
+                                'convex_area':{geometric_features[6]},
+                                'solidity':{geometric_features[7]},
+                                'equivalent_diameter_area':{geometric_features[8]},
+                                'spatial_frequency_1': {spatial_frequencies[0]},
+                                'spatial_frequency_2': {spatial_frequencies[1]},
+                                'hu_moment_1':{hu_moments[0]},
+                                'hu_moment_2':{hu_moments[1]},
+                                'hu_moment_3':{hu_moments[2]},
+                                'hu_moment_4':{hu_moments[3]},
+                                'hu_moment_5':{hu_moments[4]},
+                                'hu_moment_6':{hu_moments[5]},
+                                'hu_moment_7':{hu_moments[6]},
+                                'contrast':{texture_features[0]},
+                                'dissimilarity':{texture_features[1]},
+                                'homogeneity':{texture_features[2]},
+                                'energy':{texture_features[3]},
+                                'correlation':{texture_features[4]},
+                                'ASM':{texture_features[5]},
                             }
             metadata.append(metadata_photo)
 
@@ -118,7 +137,22 @@ with open(CSV_FILE, 'a', newline='', encoding="utf-8") as file:
                                               'minor_axis_length',
                                               'convex_area',
                                               'solidity',
-                                              'equivalent_diameter_area'
+                                              'equivalent_diameter_area',
+                                              'spatial_frequency_1',
+                                              'spatial_frequency_2',
+                                              'hu_moment_1',
+                                              'hu_moment_2',
+                                              'hu_moment_3',
+                                              'hu_moment_4',
+                                              'hu_moment_5',
+                                              'hu_moment_6',
+                                              'hu_moment_7',
+                                              'contrast',
+                                              'dissimilarity',
+                                              'homogeneity',
+                                              'energy',
+                                              'correlation',
+                                              'ASM',
                                               ])
     writer.writeheader()
     for item in metadata:
