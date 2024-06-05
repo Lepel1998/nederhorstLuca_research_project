@@ -2,37 +2,25 @@
 """
 Module: functions.py
 
-This module contains functions for image processing and augmentation.
+This module contains functions for photo preprocessing and feature extraction
 
 """
 
 import os
 import shutil
 from random import randrange
-from PIL import Image, ImageFilter, ImageChops, ImageOps  # type: ignore
+
 import cv2
-import numpy as np
-
-import sklearn
-from sklearn.cluster import KMeans
-from scipy.ndimage import binary_opening
-import skimage as ski
-from skimage import io
-from skimage.color import rgb2hsv, rgb2gray, rgb2lab
-#from skimage.draw import polygen_perimeter
-
 import matplotlib.pyplot as plt
-from skimage.measure import regionprops, find_contours
-#from skimage.feature import greycomatrix, greycoprops
-from skimage.transform import resize
+import numpy as np
+from PIL import Image, ImageFilter, ImageChops
 from skimage import measure
 from skimage.feature import graycomatrix, graycoprops
 
-
-
+""" Preprocessing of data functions """
 
 def augmentation_function(photo):
-    """ Augmentation function to flip, rotate and crop images """
+    """ Augmentation function to flip, rotate and crop photos """
 
     resized_photo = photo.resize((227, 227))
     rot90 = resized_photo.rotate(90)
@@ -51,14 +39,14 @@ def augmentation_function(photo):
                                      ))
 
     # center crop
-    right_border_image = (width + crop)/2
-    bottom_border_image = (height + crop)/2
-    left_border_image = (width - crop)/2
-    top_border_image = (height - crop)/2
-    centercrop = resized_photo.crop((left_border_image,
-                                     top_border_image,
-                                     right_border_image,
-                                     bottom_border_image))
+    right_border_photo = (width + crop)/2
+    bottom_border_photo = (height + crop)/2
+    left_border_photo = (width - crop)/2
+    top_border_photo = (height - crop)/2
+    centercrop = resized_photo.crop((left_border_photo,
+                                     top_border_photo,
+                                     right_border_photo,
+                                     bottom_border_photo))
 
     # 90 rotation clockwise with flipping right to left
     rot90flip = rot90.transpose(method=Image.FLIP_LEFT_RIGHT)
@@ -69,25 +57,29 @@ def augmentation_function(photo):
     # 270 rotation with flipping right to left
     rot270flip = rot270.transpose(method=Image.FLIP_LEFT_RIGHT)
 
-    return resized_photo, rot90, rot180, rot270, randomcrop, centercrop, rot90flip, rot180flip, rot270flip
+    return (resized_photo, rot90, rot180,
+            rot270, randomcrop, centercrop,
+            rot90flip, rot180flip, rot270flip)
 
 
 def convert_heic_jpg(heic_folder):
     """ Convert heic to jpg function """
-    for heic_image in os.listdir(heic_folder):
-        if heic_image.lower().endswith('.heic'):
+
+    for heic_photo in os.listdir(heic_folder):
+        if heic_photo.lower().endswith('.heic'):
             # create paths for the HEIC and JPG files
-            heic_file_path = os.path.join(heic_folder, heic_image)
+            heic_file_path = os.path.join(heic_folder, heic_photo)
             jpg_file_path = os.path.join(heic_folder,
-                                         heic_image.replace('.heic', '.jpg'))
+                                         heic_photo.replace('.heic', '.jpg'))
 
             # replace the HEIC file with the JPG file
-            shutil.move(heic_file_path, jpg_file_path)
-            print(f"Replaced {heic_image} with {heic_image.replace('.heic', '.jpg')}")
+            shutil.move(heic_file_path,
+                        jpg_file_path)
 
 
 def highpass_filter(photo_path, lowpass_filtered_photo):
-    """ Highpass Gaussian filter to sharpen image (Makander & Halalli (2015) """
+    """ Highpass Gaussian to sharpen photo(Makander & Halalli(2015) """
+
     photo = Image.open(photo_path)
     highpass_filtered_photo = ImageChops.subtract(photo,
                                                   lowpass_filtered_photo,
@@ -98,55 +90,59 @@ def highpass_filter(photo_path, lowpass_filtered_photo):
 
 def ignore_files(directory, files):
     """" Ignore files in folder """
+
     return [f for f in files if os.path.isfile(os.path.join(directory, f))]
 
 
 def lowpass_filter(photo_path, radius):
-    """ Lowpass Gaussian filter to smoothen image/reduce noisee (Makander & Halalli (2015) """
+    """ Lowpass Gaussian to smoothen photo/reduce noise(Makander & Halalli(2015) """
 
     photo = Image.open(photo_path)
     lowpass_filtered_photo = photo.filter(ImageFilter.GaussianBlur(radius))
     return lowpass_filtered_photo
 
 
-def binary_image(img):
-    
-    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+""" Extract features functions """
 
-    # you need to invert image 
-    gray_inverted = cv2.bitwise_not(gray_img)
+def binary_photo(photo):
+    """ Converts photo to binary photo """
 
-    # make image fully black and white with cv2.threshold()
-    _,binary = cv2.threshold(gray_inverted, 90, 255, cv2.THRESH_BINARY)
+    gray_photo = cv2.cvtColor(photo, cv2.COLOR_BGR2GRAY)
+
+    # you need to invert photo
+    gray_inverted = cv2.bitwise_not(gray_photo)
+
+    # make photo fully black and white with cv2.threshold()
+    _, binary = cv2.threshold(gray_inverted, 90, 255, cv2.THRESH_BINARY)
 
     return binary
 
 
 def geometric_feature(photo_path):
-    """ 
-        Wen, C., & Guyer, D. (2012). Image-based orchard insect automated 
-        identification and classification method. Computers and electronics 
+    """
+        Wen, C., & Guyer, D. (2012). Image-based orchard insect automated
+        identification and classification method. Computers and electronics
         in agriculture, 89, 110-115.
         Global feature extraction used as this is shown to be working better.
     """
 
-    # load and convert image to HSV 
+    # load and convert photo to HSV
     photo = cv2.imread(photo_path)
-    binary = binary_image(photo)
-    #plt.imshow(binary, cmap='gray')
-    #plt.show()
+    binary = binary_photo(photo)
+    # plt.imshow(binary, cmap='gray')
+    # plt.show()
 
-    # label the foreground object and exclude background (foreground is 1, background is 0)
-    number_labels, labels_binary = cv2.connectedComponents(binary)
+    # label the foreground object (1) and exclude background (0)
+    _, labels_binary = cv2.connectedComponents(binary)
     labels_binary = labels_binary.astype(np.uint8)
 
     # get features from photo for regions
     features = measure.regionprops(labels_binary)
 
-    ## Geometric features (Wen et al., 2009a,b)
+    # Geometric features (Wen et al., 2009a,b)
     geometric_features_list = []
     for feature in features:
-        if feature.label==0:
+        if feature.label == 0:
             continue
         area = feature.area
         geometric_features_list.append(feature.area)
@@ -154,8 +150,8 @@ def geometric_feature(photo_path):
         perimeter = feature.perimeter
         geometric_features_list.append(feature.perimeter)
 
-        circularity_ratio = (4*np.pi*area/((perimeter**2)+1)) 
-        geometric_features_list.append(circularity_ratio) 
+        circularity_ratio = (4*np.pi*area/((perimeter**2)+1))
+        geometric_features_list.append(circularity_ratio)
 
         geometric_features_list.append(feature.eccentricity)
         geometric_features_list.append(feature.major_axis_length)
@@ -164,7 +160,6 @@ def geometric_feature(photo_path):
         geometric_features_list.append(feature.convex_area)
         geometric_features_list.append(feature.solidity)
         geometric_features_list.append(feature.equivalent_diameter_area)
-        #print('Area:', area)
 
     return geometric_features_list
 
@@ -174,33 +169,33 @@ def fourier(photo_path):
     https://www.youtube.com/watch?v=JfaZNiEbreE&list=PLCeWwpzjQu9gc9C9-iZ9WTFNGhIq4-L1X
     """
 
-    # load image
-    img = cv2.imread(photo_path)
+    # load photo
+    photo = cv2.imread(photo_path)
 
-    # get binary image
-    binary = binary_image(img)
+    # get binary photo
+    binary = binary_photo(photo)
 
-    # show binary image
-    #plt.imshow(binary, cmap='gray')
+    # show binary photo
+    # plt.imshow(binary, cmap='gray')
 
-    # detecting the contours in an image
-    contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    # detecting the contours in an photo
+    contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     print(f'Number of contours found = {format(len(contours))}')
 
     # read coloured image in for drawing the contours (otherwise the lines will be drawed in white)
-    #cv2.drawContours(img, contours, -1, (0,255,0),1)
-    #plt.figure(figsize=[10,10])
-    #plt.imshow(img[:,:,::-1])
-    #plt.axis("off")
-    #plt.show()
+    # cv2.drawContours(img, contours, -1, (0,255,0),1)
+    # plt.figure(figsize=[10,10])
+    # plt.imshow(img[:,:,::-1])
+    # plt.axis("off")
+    # plt.show()
 
     # fourier transformation (https://docs.opencv.org/4.x/de/dbc/tutorial_py_fourier_transform.html)
     # contour = max(contours, key=cv2.contourArea)
     contour = max(contours, key=cv2.contourArea)
     print(f'Number of contour after max area function = {format(len(contour))}')
-    #cv2.drawContours(img, contour, -1, (0,255,0), 5)
-    #plt.imshow(img[:,:,::-1])
-    #plt.show()
+    # cv2.drawContours(img, contour, -1, (0,255,0), 5)
+    # plt.imshow(img[:,:,::-1])
+    # plt.show()
 
     fourier_contour = np.fft.fft2(contour)
     fourier_shift = np.fft.fftshift(fourier_contour)
@@ -210,66 +205,74 @@ def fourier(photo_path):
 
     spat_freq_1 = magnitude_spectrum_first_two_spat_freq[0][0][0]
     spat_freq_2 = magnitude_spectrum_first_two_spat_freq[0][0][1]
-    #print(spat_freq_1, spat_freq_2)
+    # print(spat_freq_1, spat_freq_2)
 
     return spat_freq_1, spat_freq_2
 
 
-
-
-def minimum_rectangle_image(photo_path):
+def minimum_rectangle_photo(photo_path):
     """
         https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
     """
 
-    img = cv2.imread(photo_path)
-    #img = cv2.GaussianBlur(img, (5,5), 0)
-    binary = binary_image(img)
+    photo = cv2.imread(photo_path)
+    # img = cv2.GaussianBlur(img, (5,5), 0)
+    binary = binary_photo(photo)
 
     # get contours
-    contours, hierarchy = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    #print(f'amount of contours found {len(contours)}')
+    # print(f'amount of contours found {len(contours)}')
 
     # get coordinates of minimum bounding rectangle
     if len(contours) > 0:
         contour = max(contours, key=cv2.contourArea)
         print(f'Number of contour after max area function = {format(len(contour))}')
 
-        x, y, w, h = cv2.boundingRect(contour)
+        x_top_left, y_top_left, width, height = cv2.boundingRect(contour)
 
-        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
+        cv2.rectangle(photo,
+                      (x_top_left, y_top_left),
+                      (x_top_left + width, y_top_left + height),
+                      (0, 0, 255),
+                      2)
 
-        rectangle_image = img[y:y+h, x:x+w]
+        rectangle_photo = photo[y_top_left:y_top_left+height, x_top_left:x_top_left+width]
 
         # display original image with rectangle
-        plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-        plt.title('Ímage with bounding Rectangle')
-        plt.show()
+        # plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        # plt.title('Ímage with bounding Rectangle')
+        # plt.show()
 
-        if rectangle_image.size > 0:
-            #plt.imshow(rectangle_image)
-            #plt.title('Extracted Bouding Rectangle')
-            #plt.show()
+        if rectangle_photo.size > 0:
+            # plt.imshow(rectangle_image)
+            # plt.title('Extracted Bouding Rectangle')
+            # plt.show()
             pass
         else:
-            print('Rectangle image is empty')
+            print('Rectangle photo is empty')
     else:
         print('No contours found.')
-    return rectangle_image
+    return rectangle_photo
 
 
 def invariant_moments(photo_path):
     """
     https://www.tutorialspoint.com/how-to-compute-hu-moments-of-an-image-in-opencv-python
     """
-    rect_image = minimum_rectangle_image(photo_path)
-    gray_rect_image = cv2.cvtColor(rect_image, cv2.COLOR_BGR2GRAY)
+    rect_photo = minimum_rectangle_photo(photo_path)
+    gray_rect_photo = cv2.cvtColor(rect_photo, cv2.COLOR_BGR2GRAY)
 
-    moments = cv2.moments(gray_rect_image)
+    moments = cv2.moments(gray_rect_photo)
     hu_moments = cv2.HuMoments(moments)
-    
-    return hu_moments[0][0], hu_moments[1][0], hu_moments[2][0], hu_moments[3][0], hu_moments[4][0], hu_moments[5][0], hu_moments[6][0]
+
+    return (hu_moments[0][0],
+            hu_moments[1][0],
+            hu_moments[2][0],
+            hu_moments[3][0],
+            hu_moments[4][0],
+            hu_moments[5][0],
+            hu_moments[6][0])
 
 
 def texture(photo_path):
@@ -277,94 +280,95 @@ def texture(photo_path):
     took avarage of texture features to add it to the csv file
     """
 
-    image = cv2.imread(photo_path, cv2.IMREAD_GRAYSCALE)
+    photo = cv2.imread(photo_path, cv2.IMREAD_GRAYSCALE)
 
     # computer gray level co occurence
-    distances=[1]
-    angles=[0, np.pi/4,np.pi/2, 3*np.pi/4]
-    gray_level_co_occurence = graycomatrix(image, distances, angles)
+    distances = [1]
+    angles = [0, np.pi / 4, np.pi / 2, 3 * np.pi / 4]
+    gray_level_co_occurence = graycomatrix(photo, distances, angles)
 
     # extract texture props of the GLCM
     contrast = graycoprops(gray_level_co_occurence, 'contrast')
     dissimilarity = graycoprops(gray_level_co_occurence, 'dissimilarity')
     homogeneity = graycoprops(gray_level_co_occurence, 'homogeneity')
     energy = graycoprops(gray_level_co_occurence, 'energy')
-    correlation = graycoprops(gray_level_co_occurence,'correlation')
-    ASM = graycoprops(gray_level_co_occurence, 'ASM')
+    correlation = graycoprops(gray_level_co_occurence, 'correlation')
+    uniformity = graycoprops(gray_level_co_occurence, 'ASM')
 
     mean_contrast = contrast[0].mean(axis=0)
     mean_dissimilarity = dissimilarity[0].mean(axis=0)
     mean_homogeneity = homogeneity[0].mean(axis=0)
     mean_energy = energy[0].mean(axis=0)
     mean_correlation = correlation[0].mean(axis=0)
-    mean_ASM = ASM[0].mean(axis=0)
+    mean_uniformity = uniformity[0].mean(axis=0)
 
-    return mean_contrast, mean_dissimilarity, mean_homogeneity, mean_energy, mean_correlation, mean_ASM
+    return (mean_contrast,
+            mean_dissimilarity,
+            mean_homogeneity,
+            mean_energy,
+            mean_correlation,
+            mean_uniformity)
 
 
 def color(photo_path):
-
-    def lab_to_lch(lab_img):
-        luminence_LAB, chrominance1_LAB, chrominance2_LAB = cv2.split(lab_img)
-        C = np.sqrt(chrominance1_LAB**2 + chrominance2_LAB**2)
-        H = np.arctan2(chrominance2_LAB, chrominance1_LAB) * (180 / np.pi)
-        H[H<0] += 360
-
-        luminence_LAB = luminence_LAB.astype(np.float32)
-        C = C.astype(np.float32)
-        H = H.astype(np.float32)
-        return cv2.merge((luminence_LAB, C, H))
-
-    def display_images(images, titles, cmap=None):
-        plt.figure(figsize=(15, 5))
-        for i, image in enumerate(images):
-            plt.subplot(1, len(images), i + 1)
-            plt.imshow(image, cmap=cmap if i > 0 else None)
-            plt.title(titles[i])
-            plt.axis('off')
-        plt.show()
-
-    # Read the image
-    rect_image = minimum_rectangle_image(photo_path)
-    img = cv2.GaussianBlur(rect_image, (5,5),0)
-
-    # hsv image features
-    hsv_image = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-    hue_HSV, saturation_HSV, value_HSV = cv2.split(hsv_image)
-
-    mean_hue_hsv = np.mean(hue_HSV)                         
-    std_hue_hsv = np.std(hue_HSV)                               
-    mean_sat_hsv = np.mean(saturation_HSV)  
-    std_sat_hsv = np.std(saturation_HSV)    
-
-    # Display the original image, HSV image, and the individual channels
-
-    # lab image features
-    lab_image = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
-    luminence_LAB, chrominance1_LAB, chrominance2_LAB = cv2.split(lab_image)
-
-    mean_luminance = np.mean(luminence_LAB) 
-
-    saturation_lab = np.sqrt(np.square(chrominance1_LAB) + np.square(chrominance2_LAB))
-    std_sat_lab = np.std(saturation_lab)
-
-
-    # lch image features
-
-    lch_image = lab_to_lch(lab_image)
-    lightness_LCH, saturation_LCH, hue_LCH = cv2.split(lch_image)
-
-    mean_hue_LCH = np.mean(hue_LCH)                
-    std_hue_LCH = np.std(hue_LCH)                  
-    mean_sat_LCH = np.mean(saturation_LCH)         
-    std_sat_LCH = np.std(saturation_LCH)           
-    #print(mean_hue_LCH, std_hue_LCH, mean_sat_LCH, std_sat_LCH)
-
     """
-    display_images(
-        [img, lch_image, lightness_LCH, saturation_LCH, hue_LCH],
-        ["Original Image (RGB)", "LAB Image", " luminence_LAB", "chrominance1_LAB", "chrominance2_LAB"],
-        cmap='gray'
-    )
+    Extract color features of minimum rectangle background object
     """
-    return mean_hue_hsv, std_hue_hsv, mean_sat_hsv, std_sat_hsv, mean_hue_LCH, std_hue_LCH, mean_sat_LCH, std_sat_LCH, mean_luminance, std_sat_lab
+    def lab_to_lch(lab_photo):
+        luminence_lab, chrominance1_lab, chrominance2_lab = cv2.split(lab_photo)
+        chrominance = np.sqrt(chrominance1_lab**2 + chrominance2_lab**2)
+        hue = np.arctan2(chrominance2_lab, chrominance1_lab) * (180 / np.pi)
+        hue[hue < 0] += 360
+
+        luminence_lab = luminence_lab.astype(np.float32)
+        chrominance = chrominance.astype(np.float32)
+        hue = hue.astype(np.float32)
+        return cv2.merge((luminence_lab, chrominance, hue))
+
+    # Read the photo
+    rect_photo = minimum_rectangle_photo(photo_path)
+    photo = cv2.GaussianBlur(rect_photo, (5, 5), 0)
+
+    # hsv photo features
+    hsv_photo = cv2.cvtColor(photo, cv2.COLOR_BGR2HSV)
+    hue_hsv, saturation_hsv, _ = cv2.split(hsv_photo)
+
+    mean_hue_hsv = np.mean(hue_hsv)
+    std_hue_hsv = np.std(hue_hsv)
+    mean_sat_hsv = np.mean(saturation_hsv)
+    std_sat_hsv = np.std(saturation_hsv)
+
+    # Display the original photo, HSV photo, and the individual channels
+
+    # lab photo features
+    lab_photo = cv2.cvtColor(photo, cv2.COLOR_BGR2LAB)
+    luminence_lab, chrominance1_lab, chrominance2_lab = cv2.split(lab_photo)
+    mean_luminance = np.mean(luminence_lab)
+    saturation_lab = np.sqrt(np.square(chrominance1_lab) + np.square(chrominance2_lab))
+
+    # scale saturation lab down to prevent overflow
+    max_value = np.max(saturation_lab)
+    if max_value > 0:
+        saturation_lab_scaled = saturation_lab / max_value
+    else:
+        saturation_lab_scaled = saturation_lab
+
+    # check if there is sufficient variability in the data
+    if np.var(saturation_lab_scaled) > 0:
+        std_sat_lab = np.std(saturation_lab_scaled)
+    else:
+        std_sat_lab = 0.0
+
+    # lch photo features
+    lch_photo = lab_to_lch(lab_photo)
+    _, saturation_lch, hue_lch = cv2.split(lch_photo)
+
+    mean_hue_lch = np.mean(hue_lch)
+    std_hue_lch = np.std(hue_lch)
+    mean_sat_lch = np.mean(saturation_lch)
+    std_sat_lch = np.std(saturation_lch)
+
+    return (mean_hue_hsv, std_hue_hsv, mean_sat_hsv,
+            std_sat_hsv, mean_hue_lch, std_hue_lch,
+            mean_sat_lch, std_sat_lch, mean_luminance,
+            std_sat_lab)

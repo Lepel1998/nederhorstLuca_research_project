@@ -1,4 +1,4 @@
-from functions import binary_image
+from functions import binary_photo
 import cv2
 import matplotlib.pyplot as plt
 
@@ -8,7 +8,7 @@ img = cv2.GaussianBlur(img, (5,5), 0)
 img = cv2.GaussianBlur(img, (5,5), 0)
 
 print(img)
-binary = binary_image(img)
+binary = binary_photo(img)
 
 plt.imshow(binary, cmap='gray')
 plt.show()
