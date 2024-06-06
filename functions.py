@@ -16,6 +16,10 @@ import numpy as np
 from PIL import Image, ImageFilter, ImageChops
 from skimage import measure
 from skimage.feature import graycomatrix, graycoprops
+import pillow_heif
+
+pillow_heif.register_heif_opener()
+
 
 """ Preprocessing of data functions """
 
@@ -70,11 +74,20 @@ def convert_heic_jpg(heic_folder):
             # create paths for the HEIC and JPG files
             heic_file_path = os.path.join(heic_folder, heic_photo)
             jpg_file_path = os.path.join(heic_folder,
-                                         heic_photo.replace('.heic', '.jpg'))
+                                         heic_photo.replace('.HEIC', '.jpg'))
+            #print(heic_file_path)
+            #print(jpg_file_path)
+            try:
+                image = Image.open(heic_file_path)
+                image.save(jpg_file_path, format='JPEG')
+                
+                os.remove(heic_file_path)
+                print('Conversion successfull', heic_photo)
+            except Exception as e:
+                print('Error converting', heic_photo)
+        else:
+            print('No conversion needed')
 
-            # replace the HEIC file with the JPG file
-            shutil.move(heic_file_path,
-                        jpg_file_path)
 
 
 def highpass_filter(photo_path, lowpass_filtered_photo):
@@ -180,7 +193,7 @@ def fourier(photo_path):
 
     # detecting the contours in an photo
     contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    print(f'Number of contours found = {format(len(contours))}')
+    #print(f'Number of contours found = {format(len(contours))}')
 
     # read coloured image in for drawing the contours (otherwise the lines will be drawed in white)
     # cv2.drawContours(img, contours, -1, (0,255,0),1)
@@ -192,7 +205,7 @@ def fourier(photo_path):
     # fourier transformation (https://docs.opencv.org/4.x/de/dbc/tutorial_py_fourier_transform.html)
     # contour = max(contours, key=cv2.contourArea)
     contour = max(contours, key=cv2.contourArea)
-    print(f'Number of contour after max area function = {format(len(contour))}')
+    #print(f'Number of contour after max area function = {format(len(contour))}')
     # cv2.drawContours(img, contour, -1, (0,255,0), 5)
     # plt.imshow(img[:,:,::-1])
     # plt.show()
@@ -227,7 +240,7 @@ def minimum_rectangle_photo(photo_path):
     # get coordinates of minimum bounding rectangle
     if len(contours) > 0:
         contour = max(contours, key=cv2.contourArea)
-        print(f'Number of contour after max area function = {format(len(contour))}')
+        #print(f'Number of contour after max area function = {format(len(contour))}')
 
         x_top_left, y_top_left, width, height = cv2.boundingRect(contour)
 

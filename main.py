@@ -25,7 +25,7 @@ register_heif_opener()
 
 # load photos and store in directory which is named after the class
 current_directory = os.getcwd()
-DATA_FOLDER_PATH = os.path.join(current_directory, 'dataset')
+DATA_FOLDER_PATH = os.path.join(current_directory, 'adult_dataset')
 DATA_FOLDER_PATH = os.path.normpath(DATA_FOLDER_PATH).replace("\\", "/")
 
 # create augmentated directory which has same buildup as original directory
@@ -46,6 +46,11 @@ AUGMENT_DATA_FOLDER_PATH = os.path.join(current_directory, 'processed_dataset')
 
 # see all species folders in all data folder
 species = os.listdir(DATA_FOLDER_PATH)
+for heic_folder in species:
+    specie_folder_path = os.path.join(DATA_FOLDER_PATH, heic_folder)
+    specie_folder_path = os.path.normpath(specie_folder_path)
+    convert_heic_jpg(specie_folder_path)
+
 
 # go over photo inside species folder and add to annotation file called csvfile
 metadata = []
@@ -56,10 +61,11 @@ for specie in species:
     specie_folder = os.listdir(specie_folder_path)
 
     """ convert heic photo to jpg photo function """
-    convert_heic_jpg(specie_folder_path)
+    
 
     for photo in specie_folder:
         photo_path = os.path.join(specie_folder_path, photo)
+        print(photo_path)
         photo_path = os.path.normpath(photo_path)
         photo_path = photo_path.replace("\\", "\\\\")
 

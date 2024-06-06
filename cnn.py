@@ -15,7 +15,7 @@ import tensorflow as tf
 import tensorflow.keras as keras
 from matplotlib import pyplot as plt
 from tensorflow.keras.callbacks import TensorBoard
-from tensorflow.keras.metrics import Precision, Recall, BinaryAccuracy
+from tensorflow.keras.metrics import Precision, Recall, BinaryAccuracy, CategoricalAccuracy
 from tensorflow.keras.models import load_model
 from tensorflow.python.keras.engine import data_adapter
 from tensorflow.python.keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Dropout
@@ -28,22 +28,22 @@ data_adapter._is_distributed_dataset = _is_distributed_dataset
 
 
 # load data and create iterator
-image_dataset_path = "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Processed_Dataset"
-image_dataset = tf.keras.utils.image_dataset_from_directory(image_dataset_path, batch_size = 18, image_size = (227, 227))
+image_dataset_path = 'processed_dataset'
+image_dataset = tf.keras.utils.image_dataset_from_directory(image_dataset_path, batch_size = 32, image_size = (227, 227))
 dataset_iterator = image_dataset.as_numpy_iterator() 
 batch = dataset_iterator.next()   
 
 # 0 is Chrysomya Albiceps
 # 1 is Synthesomya Nudiseta
-# batch[0] is our image
-# batch[1] is our lable
+#batch[0] is our image
+#batch[1] is our lable
 #fig, ax = plt.subplots(ncols=4, figsize=(20,20))
 #for idx, img in enumerate(batch[0][:4]):
 #    ax[idx].imshow(img.astype(int))
 #    ax[idx].title.set_text(batch[1][idx])
 #plt.show()
 
-# preprocess the data to get values between 0 and 1
+# preprocess the data to get values between 0 and 1 per pixel
 process_image_dataset = image_dataset.map(lambda x,y: (x/227, y))
 scaled_iterator = process_image_dataset.as_numpy_iterator()
 batch = scaled_iterator.next()
@@ -84,7 +84,7 @@ model.summary()
 # training of the model and save process
 log_process = "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Research Project/AI/Code/log_process_CNN"
 tb_callback = tf.keras.callbacks.TensorBoard(log_dir=log_process) # you can see the performance of your model while training
-history = model.fit(train_dataset, epochs=20, validation_data=validate_dataset, callbacks=[tb_callback])
+history = model.fit(train_dataset, epochs=10, validation_data=validate_dataset, callbacks=[tb_callback])
 
 # history contains all the data ! plot this data, if you see your loss going down but your validation loss going up, this might indicate overfitting
 plt.figure()
@@ -111,7 +111,7 @@ for batch in test_dataset.as_numpy_iterator():
 print(f'Precision: {precision.result().numpy()}, Accuracy: {accuracy.result().numpy()}, Recall: {recall.result().numpy()}')
 
 
-# test the model with random image from the internet
+# test the model with random image from the internet - Chrysomya Albiceps
 random_image = cv2.imread('image.png')
 plt.imshow(cv2.cvtColor(random_image, cv2.COLOR_BGR2RGB))
 resize = tf.image.resize(random_image, (227, 227))

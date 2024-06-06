@@ -39,7 +39,7 @@ def reference_number_species(species):
     elif 'Synthesiomyia Nudiseta' in species:
         return 2
     else:
-        return 'Unknown'
+        return 0
 
 def remove_brackets(cel_value):
     cel_value = cel_value.strip('{}')
