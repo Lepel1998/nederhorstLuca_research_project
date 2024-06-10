@@ -20,7 +20,7 @@ from pillow_heif import register_heif_opener
 register_heif_opener()
 
 # load dataset
-dataset_directory = 'adult_dataset'
+dataset_directory = 'processed_dataset'
 
 # do augmentation and preprocessing here to skip slow main.py function
 augmentation = transforms.Compose([
