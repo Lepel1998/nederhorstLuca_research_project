@@ -15,7 +15,8 @@ from sklearn import svm
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+import time
 
 sns.set_style('darkgrid')
 
@@ -26,20 +27,29 @@ processed_metadata_df = metadata_df
 
 
 def determine_species(folder_path):
-    if 'Chrysomya Albiceps' in folder_path:
-        return 'Chrysomya Albiceps'
-    elif 'Synthesiomyia Nudiseta' in folder_path:
-        return 'Synthesiomyia Nudiseta'
-    else:
-        return 'Unknown'
+    if 'Chrysomya albiceps adult' in folder_path:
+        return 'Chrysomya albiceps adult'
+    elif 'Synthesiomyia nudiseta adult' in folder_path:
+        return 'Synthesiomyia nudiseta adult'
+    elif 'Chrysomya megacephala adult' in folder_path:
+        return 'Chrysomya megacephala adult'
+    elif 'Chrysomya albiceps larvae' in folder_path:
+        return 'Chrysomya albiceps larvae'
+    elif 'Synthesiomyia nudiseta larvae' in folder_path:
+        return 'Synthesiomyia nudiseta larvae'
+
     
 def reference_number_species(species):
-    if 'Chrysomya Albiceps' in species:
+    if 'Chrysomya albiceps adult' in species:
         return 1
-    elif 'Synthesiomyia Nudiseta' in species:
+    elif 'Synthesiomyia nudiseta adult' in species:
         return 2
-    else:
-        return 0
+    elif 'Chrysomya megacephala adult' in species:
+        return 3
+    elif 'Chrysomya albiceps larvae' in species:
+        return 4
+    elif 'Synthesiomyia nudiseta larvae' in species:
+        return 5
 
 def remove_brackets(cel_value):
     cel_value = cel_value.strip('{}')
@@ -91,7 +101,7 @@ else:
 # add column with species and add column with specific reference number of class
 processed_metadata_df['species'] = processed_metadata_df['augment_specie_folder_path'].apply(determine_species)
 processed_metadata_df['class'] = processed_metadata_df['species'].apply(reference_number_species)
-#print(processed_metadata_df['class'].value_counts()) # see amount of datapoints per class
+print(processed_metadata_df['class'].value_counts()) # see amount of datapoints per class
 
 # check distribution of classes
 chrysomya = processed_metadata_df[processed_metadata_df['class'] == 1]
@@ -141,7 +151,13 @@ x_train, x_test, y_train, y_test = train_test_split(independent_variable_x,
 # because a hyperplane is used to differentiate, linear is chosen
 # if you want to implement for more than 2 classes, add decision_function_shape = 'ovr' (check which one as there are also other decision_function_shapes)
 svm_classifier = svm.SVC(kernel='linear', gamma='auto', C=1) 
+
+start_time_svm = time.time()
 svm_classifier.fit(x_train, y_train)
+end_time_svm = time.time()
+train_time_svm = end_time_svm - start_time_svm
+print(f'Training time SVM: {train_time_svm}')
+
 y_predict_svm = svm_classifier.predict(x_test)
 
 # evaluation accuracy SVM
@@ -151,10 +167,24 @@ print(f'Accuracy: {accuracy_svm}')
 print('Classification Report SVM:')
 print(report)
 
+confusion_matrix_svm = confusion_matrix(y_test, y_predict_svm)
+plt.figure(figsize=(10,7))
+sns.heatmap(confusion_matrix_svm, annot=True, fmt='d', cmap='Blues')
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.title('Confusion Matrix SVM')
+plt.show
+
 # KNN modelling and evaluation
 # rest is in default, metric is minkowski is default, meaning euclidean distance
 knn_classifier = KNeighborsClassifier(n_neighbors=5)
+
+start_time_knn = time.time()
 knn_classifier.fit(x_train, y_train)
+end_time_knn = time.time()
+train_time_knn = end_time_knn - start_time_knn
+print(f'Training time KNN: {train_time_knn}')
+
 y_predict_knn = knn_classifier.predict(x_test)
 
 # evaluation accuracy KNN
@@ -164,9 +194,23 @@ print(f'Accuracy: {accuracy_knn}')
 print('Classification Report KNN:')
 print(report)
 
+confusion_matrix_knn = confusion_matrix(y_test, y_predict_knn)
+plt.figure(figsize=(10,7))
+sns.heatmap(confusion_matrix_knn, annot=True, fmt='d', cmap='Blues')
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.title('Confusion Matrix KNN')
+plt.show
+
 # NB modelling and evaluation
 nb_classifier = GaussianNB()
+
+start_time_nb = time.time()
 nb_classifier.fit(x_train, y_train)
+end_time_nb = time.time()
+train_time_nb = end_time_nb - start_time_nb
+print(f'Training time NB: {train_time_nb}')
+
 y_predict_nb = nb_classifier.predict(x_test)
 
 # evaluate accuracy NB
@@ -176,6 +220,13 @@ print(f'Accuracy: {accuracy_nb}')
 print('Classification Report NB:')
 print(report)
 
+confusion_matrix_nb = confusion_matrix(y_test, y_predict_nb)
+plt.figure(figsize=(10,7))
+sns.heatmap(confusion_matrix_nb, annot=True, fmt='d', cmap='Blues')
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.title('Confusion Matrix KNN')
+plt.show
 
 
 # put all accuracies in one set and plot

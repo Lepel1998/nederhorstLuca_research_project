@@ -25,7 +25,7 @@ register_heif_opener()
 
 # load photos and store in directory which is named after the class
 current_directory = os.getcwd()
-DATA_FOLDER_PATH = os.path.join(current_directory, 'adult_dataset')
+DATA_FOLDER_PATH = os.path.join(current_directory, 'final_dataset')
 DATA_FOLDER_PATH = os.path.normpath(DATA_FOLDER_PATH).replace("\\", "/")
 
 # create augmentated directory which has same buildup as original directory
