@@ -94,7 +94,7 @@ log_process = "C:/Users/luca-/Documents/Forensic Science/year 2/Research/Researc
 tb_callback = tf.keras.callbacks.TensorBoard(log_dir=log_process) # you can see the performance of your model while training
 
 start_time_cnn = time.time()
-history = model.fit(train_dataset, epochs=1, validation_data=validate_dataset, callbacks=[tb_callback])
+history = model.fit(train_dataset, epochs=20, validation_data=validate_dataset, callbacks=[tb_callback])
 end_time_cnn = time.time()
 train_time_cnn = end_time_cnn - start_time_cnn
 print(f'Training time CNN: {train_time_cnn}')
