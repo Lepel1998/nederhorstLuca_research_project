@@ -1,6 +1,13 @@
+"""
+Module: Pretrained Visual Transformers Feature Extraction (Error)
+
+Pretrained model retrieved from 'google/vit-base-patch16-224-in21k'
+
+"""
+import os
 import time
-import numpy as np
 import torch
+from joblib import dump
 from transformers import ViTFeatureExtractor, ViTModel
 from torchvision.datasets import ImageFolder
 from torchvision import transforms
@@ -9,33 +16,35 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-import seaborn as sns
+from sklearn.metrics import (accuracy_score,
+                             confusion_matrix,
+                             classification_report)
 import matplotlib.pyplot as plt
-
+import seaborn as sns
 sns.set_style('darkgrid')
 
-
-# load pre-trained ViT model and feature extractor
-feature_extractor = ViTFeatureExtractor.from_pretrained('google/vit-base-patch16-224-in21k', do_rescale=False)
+# load pre-trained ViT model and feature extractor from Huggingsface
+feature_extractor = ViTFeatureExtractor.from_pretrained('google/vit-base-patch16-224-in21k',
+                                                        do_rescale=False)
 model = ViTModel.from_pretrained('google/vit-base-patch16-224-in21k')
 print('pretrained model retrieved')
 
 # load dataset
-dataset_path = 'dataset'
-dataset = ImageFolder(root=dataset_path, transform=transforms.Compose([
+DATASET_PATH = 'dataset'
+dataset = ImageFolder(root=DATASET_PATH, transform=transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
 ]))
 
 # define DataLoader
-batch_size = 8
-dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
+BATCH_SIZE = 8
+dataloader = DataLoader(dataset,
+                        batch_size=BATCH_SIZE,
+                        shuffle=False)
 
-# extract features from images
+# extract features from images with pretrained model and dataloader
 features = []
 labels = []
-
 for images, labels_batch in dataloader:
     inputs = feature_extractor(images=images, return_tensors="pt")
     outputs = model(**inputs)
@@ -48,14 +57,13 @@ features = torch.cat(features, dim=0)
 labels = torch.tensor(labels)
 
 # split data into train (80%) and test (20%) sets randomly
-train_features, test_features, train_labels, test_labels = train_test_split(features, 
-                                                                            labels, 
-                                                                            test_size=0.2, 
-                                                                            random_state=2, 
+train_features, test_features, train_labels, test_labels = train_test_split(features,
+                                                                            labels,
+                                                                            test_size=0.2,
+                                                                            random_state=2,
                                                                             stratify=labels)
-print(train_labels, test_labels)
 
-# convert tensors to NumPy arrays, because Scikit-Learn  classifiers require inputs in the form of numpy arrays
+# convert tensors to NumPy arrays for Scikit-Learn classifiers
 train_features = train_features.detach().cpu().numpy()
 test_features = test_features.detach().cpu().numpy()
 train_labels = train_labels.detach().cpu().numpy()
@@ -75,18 +83,25 @@ svm_predictions = svm_classifier.predict(test_features)
 svm_accuracy = accuracy_score(test_labels, svm_predictions)
 print(f'SVM Accuracy: {svm_accuracy}')
 
-report_svm = classification_report(test_labels, svm_predictions, labels=range(len(all_labels)), target_names=all_labels)
+report_svm = classification_report(test_labels,
+                                   svm_predictions,
+                                   labels=range(len(all_labels)),
+                                   target_names=all_labels)
 print('\nClassification Report SVM:')
 print(report_svm)
 
-confusion_matrix_svm = confusion_matrix(test_labels, svm_predictions, labels=range(len(all_labels)))
+confusion_matrix_svm = confusion_matrix(test_labels,
+                                        svm_predictions,
+                                        labels=range(len(all_labels)))
 print('Confusion Matrix SVM:')
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(10, 7))
 sns.heatmap(confusion_matrix_svm, annot=True, fmt='d', cmap='Blues')
 plt.xlabel('Predicted')
 plt.ylabel('True')
-plt.title('Confusion Matrix CNN')
+plt.title('Confusion Matrix SVM')
 plt.show()
+
+dump(svm_classifier, os.path.join('trained_models', 'InClasViTSVM_Model.joblib'))
 
 # train KNN classifier and predict label on features extracted from ViT
 knn_classifier = KNeighborsClassifier()
@@ -101,18 +116,25 @@ knn_predictions = knn_classifier.predict(test_features)
 knn_accuracy = accuracy_score(test_labels, knn_predictions)
 print(f'KNN Accuracy: {knn_accuracy}')
 
-report_knn = classification_report(test_labels, knn_predictions, labels=range(len(all_labels)), target_names=all_labels)
+report_knn = classification_report(test_labels,
+                                   knn_predictions,
+                                   labels=range(len(all_labels)),
+                                   target_names=all_labels)
 print('\nClassification Report KNN:')
 print(report_knn)
 
-confusion_matrix_knn = confusion_matrix(test_labels, knn_predictions, labels=range(len(all_labels)))
+confusion_matrix_knn = confusion_matrix(test_labels,
+                                        knn_predictions,
+                                        labels=range(len(all_labels)))
 print('Confusion Matrix KNN:')
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(10, 7))
 sns.heatmap(confusion_matrix_knn, annot=True, fmt='d', cmap='Blues')
 plt.xlabel('Predicted')
 plt.ylabel('True')
 plt.title('Confusion Matrix KNN')
 plt.show()
+
+dump(knn_classifier, os.path.join('trained_models', 'InClasViTKNN_Model.joblib'))
 
 # train NB classifier and predict label on features extracted from ViT
 nb_classifier = GaussianNB()
@@ -127,21 +149,22 @@ nb_predictions = nb_classifier.predict(test_features)
 nb_accuracy = accuracy_score(test_labels, nb_predictions)
 print(f'NB Accuracy: {nb_accuracy}')
 
-report_nb = classification_report(test_labels, nb_predictions, labels=range(len(all_labels)), target_names=all_labels)
+report_nb = classification_report(test_labels,
+                                  nb_predictions,
+                                  labels=range(len(all_labels)),
+                                  target_names=all_labels)
 print('\nClassification Report NB:')
 print(report_nb)
 
-confusion_matrix_nb = confusion_matrix(test_labels, nb_predictions, labels=range(len(all_labels)))
+confusion_matrix_nb = confusion_matrix(test_labels,
+                                       nb_predictions,
+                                       labels=range(len(all_labels)))
 print('Confusion Matrix NB:')
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(10, 7))
 sns.heatmap(confusion_matrix_nb, annot=True, fmt='d', cmap='Blues')
 plt.xlabel('Predicted')
 plt.ylabel('True')
 plt.title('Confusion Matrix NB')
 plt.show()
 
-
-
-
-
-
+dump(nb_classifier, os.path.join('trained_models', 'InClasViTNB_Model.joblib'))

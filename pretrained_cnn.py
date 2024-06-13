@@ -1,45 +1,48 @@
 """
-CNN with transfer learning (pretrained model)
+Module: CNN with transfer learning (pretrained model)
 
-Because of small dataset it is important to choose the pretrained model which is good in fine-tuning on small dataset
-EfficientNetB0 is chosen for balance between performance and efficiency
-Augmentation to artificially increase the dataset size and variability
-Freezig layers: initially pre-trained layers are frozen to preserve their learned features
-Fine-tuning: unfreeze the last few layers of the pre-trained model and retrain with a lower learning rate to improve performance
+Because of small dataset it is important to choose the pretrained model which is good on small datasets.
+The pretrained EfficientNetB0 is chosen for balance between performance and efficiency.
+Freezing layers: initially pre-trained layers are frozen to preserve their learned features.
+Fine-tuning: unfreeze the last few layers of the pre-trained model and retrain with a
+lower learning rate to improve performance. Lower learning rate means the new learning will not influence 
+the already trained layers a lot!
 https://www.youtube.com/watch?v=fCtMf6qHtdk
-
-
+Pretrained EfficientNetB0 model"https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth"
 """
-import torch
-from tensorflow.python.keras.models import load_model
+
 import os
 import time
-import torch.nn as nn
-from torchvision import models
-import torch.optim as optim
-import matplotlib.pyplot as plt
-from torchvision import datasets, transforms, models
 import seaborn as sns
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-from torch.utils.data import DataLoader, random_split
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix, classification_report
 from pillow_heif import register_heif_opener
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import DataLoader, random_split
+from torchvision import datasets, transforms, models
+
 register_heif_opener()
 sns.set_style('darkgrid')
 
-# load dataset
-dataset_directory = 'processed_dataset'
 
-# do augmentation and preprocessing here to skip slow main.py function
+# path to dataset
+DATASET_PATH = 'processed_dataset'
+
+# normalizes tensor using mean and standard deviation values from ImageNet dataset
+# will result in more stable and efficient training process
 preprocessing = transforms.Compose([
     transforms.Resize((224, 224)),
-    transforms.ToTensor(), # converts image to tensor
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])    # normalizes tensor using mean and standard deviation values from ImageNet dataset
+    transforms.ToTensor(),
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 ])
 
-# load dataset 
-dataset = datasets.ImageFolder(root = dataset_directory, transform=preprocessing)
+# load dataset with preprocessing transformations
+dataset = datasets.ImageFolder(root=DATASET_PATH,
+                               transform=preprocessing)
 
-# check which label referres to what species
+# map class labels to species names
 class_labels = dataset.classes
 label_to_species = {}
 for label in range(len(class_labels)):
@@ -47,24 +50,23 @@ for label in range(len(class_labels)):
 print("Label to species:")
 print(label_to_species)
 
-# divide dataset into training and test set
+# split dataset into training and testing sets (80% train, 20% test)
 train_size = int(0.8*len(dataset))
 test_size = len(dataset) - train_size
 train_dataset, test_dataset = random_split(dataset, [train_size, test_size])
 
-# dataloader to load data into differnet batches
+# load data in batches for training and testing
 train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-test_dataloader = DataLoader(test_dataset, batch_size = 32, shuffle=False)
+test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
-# load the EfficientNetB0 model retrieved from torch (CNN with transfer learning)
-#  "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth"
+# load EfficientNetB0 model pre-trained on ImageNet dataset
 model = models.efficientnet_b0(pretrained=True)
 
-# freeze base model, this is the transfer learning part
+# freeze the pretrained model layers to maintain their learned features
 for parameter in model.parameters():
     parameter.requires_grad = False
 
-# Add custom layers on top of base model, this is also the transfer leanring part
+# add custom layer on top of base model for our specific classification task (transfer learning)
 number_features = model.classifier[1].in_features
 model.classifier = nn.Sequential(
     nn.Linear(number_features, 1024),
@@ -74,21 +76,24 @@ model.classifier = nn.Sequential(
     nn.Softmax(dim=1)
 )
 
-# define loss and optimizer
+# define loss function and optimizer
 loss_criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.classifier.parameters(), lr=1e-4)
 
-# save the history of the training model 
+# lists to store training history
 train_losses = []
 train_accuracies = []
-epoch_amount = 10
+
+# set the number of epochs
+# an epoch is a complete pass through the entire training dataset
+EPOCH_AMOUNT = 10
 
 # training loop
 start_time_cnn = time.time()
-for epoch in range(epoch_amount):
+for epoch in range(EPOCH_AMOUNT):
     model.train()
-    running_loss = 0.0
-    running_corrects = 0
+    RUNNING_LOSS = 0.0
+    RUNNING_CORRECTS = 0
 
     for inputs, labels in train_dataloader:
         optimizer.zero_grad()
@@ -98,34 +103,32 @@ for epoch in range(epoch_amount):
         optimizer.step()
 
         _, predictions = torch.max(outputs, 1)
-        running_loss = running_loss + loss.item() * inputs.size(0)
-        running_corrects = running_corrects + torch.sum(predictions == labels.data)
+        RUNNING_LOSS = RUNNING_LOSS + loss.item() * inputs.size(0)
+        RUNNING_CORRECTS = RUNNING_CORRECTS + torch.sum(predictions == labels.data)
 
-    epoch_loss = running_loss / train_size
-    epoch_accuracy = running_corrects.double() / train_size 
+    epoch_loss = RUNNING_LOSS / train_size
+    epoch_accuracy = RUNNING_CORRECTS.double() / train_size
 
-    # updates about process
-    print(f'Epoch {epoch} / {epoch_amount - 1}, loss: {epoch_loss:.4f}, accuracy: {epoch_accuracy:.4f}') 
+    # updates process
+    print(f'Epoch {epoch} / {EPOCH_AMOUNT - 1}, loss: {epoch_loss:.4f}, accuracy: {epoch_accuracy:.4f}')
 
-    # add history to lists
+    # save history
     train_losses.append(epoch_loss)
     train_accuracies.append(epoch_accuracy)
 
-"""
-You can add fine tuning here
-
-"""
+# fine tune model by unfreezing the last few layers
 for param in model.features[-20:].parameters():
     param.requires_grad = True
 
+# define a new optimizer for fine-tuning
 optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=1e-5)
 
-fine_tune_epochs = 2
-total_epochs = epoch_amount + fine_tune_epochs
-for epoch in range(epoch_amount, total_epochs):
+FINE_TUNE_EPOCHS = 2
+TOTAL_EPOCHS = EPOCH_AMOUNT + FINE_TUNE_EPOCHS
+for epoch in range(EPOCH_AMOUNT, TOTAL_EPOCHS):
     model.train()
-    running_loss = 0.0
-    running_corrects = 0
+    RUNNING_LOSS = 0.0
+    RUNNING_CORRECTS = 0
 
     for inputs, labels in train_dataloader:
         optimizer.zero_grad()
@@ -136,15 +139,15 @@ for epoch in range(epoch_amount, total_epochs):
         optimizer.step()
 
         _, predictions = torch.max(outputs, 1)
-        running_loss += loss.item() * inputs.size(0)
-        running_corrects += torch.sum(predictions == labels.data)
+        RUNNING_LOSS += loss.item() * inputs.size(0)
+        RUNNING_CORRECTS += torch.sum(predictions == labels.data)
 
-    epoch_loss = running_loss / train_size
-    epoch_acc = running_corrects.double() / train_size
+    epoch_loss = RUNNING_LOSS / train_size
+    epoch_acc = RUNNING_CORRECTS.double() / train_size
 
-    print(f"Epoch {epoch}/{total_epochs-1}, Loss: {epoch_loss:.4f}, Acc: {epoch_acc:.4f}")
+    print(f"Epoch {epoch}/{TOTAL_EPOCHS-1}, Loss: {epoch_loss:.4f}, Acc: {epoch_acc:.4f}")
 
-    # Append to history lists
+    # save history
     train_losses.append(epoch_loss)
     train_accuracies.append(epoch_acc)
 
@@ -152,36 +155,43 @@ end_time_cnn = time.time()
 train_time_cnn = end_time_cnn - start_time_cnn
 print(f'Training time CNN: {train_time_cnn}')
 
-# evaluate the model
+# evaluate modek on test dataset
 model.eval()
-validation_loss = 0.0
-validation_corrects = 0.0
+VALIDATION_LOSS = 0.0
+VALIDATION_CORRECTS = 0.0
 
-# save the history of the training model
+# lists to store true and predicted labels for evaluation
 true_labels = []
 predicted_labels = []
 
+# disable gardient calculation to save memory and computation
 with torch.no_grad():
     for inputs, labels in test_dataloader:
         outputs = model(inputs)
+
+        # calculate loss between predicted and actual labels
         loss = loss_criterion(outputs, labels)
 
+        # get index of maximum value in output tensor
+        # corresponds to predicted class
         _, predictions = torch.max(outputs, 1)
-        validation_loss = validation_loss + loss.item() * inputs.size(0)
-        validation_corrects = validation_corrects + torch.sum(predictions == labels.data)
+        VALIDATION_LOSS = VALIDATION_LOSS + loss.item() * inputs.size(0)
+        VALIDATION_CORRECTS = VALIDATION_CORRECTS + torch.sum(predictions == labels.data)
 
         true_labels.extend(labels.cpu().numpy().astype(int))
         predicted_labels.extend(predictions.cpu().numpy().astype(int))
-        #predicted_labels.append(validation_corrects)
-       
+
+# print a few true and predicted labels to verify
 print(f'True labels: {true_labels[:5]}')
-print(f'Predicted labels: {predicted_labels[:5]}')   
-validation_loss = validation_loss / test_size
-validation_accuracy = validation_corrects.double() / test_size
+print(f'Predicted labels: {predicted_labels[:5]}')
 
-print(f'Validation loss: {validation_loss:.4f}, Validation Accuracy: {validation_accuracy:.4f}')
+# calculate validation loss and accuracy
+VALIDATION_LOSS = VALIDATION_LOSS / test_size
+validation_accuracy = VALIDATION_CORRECTS.double() / test_size
 
-# plot accuracy of model training in plot
+print(f'Validation loss: {VALIDATION_LOSS:.4f}, Validation Accuracy: {validation_accuracy:.4f}')
+
+# plot training loss and accuracy
 plt.plot(train_losses, 'r', label='train_loss')
 plt.plot(true_labels, 'm', label='validation_loss')
 plt.plot(train_accuracies, 'b', label='train_accuracy')
@@ -192,22 +202,21 @@ plt.ylabel('Value')
 plt.ylim(0, 1)
 plt.show()
 
-# print 
+# print classification report
 report = classification_report(true_labels, predicted_labels)
 print('\nClassification Report CNN:')
 print(report)
 
-# confusion matrix
+# plot confusion matrix
 confusion_matrix_pretrained_cnn = confusion_matrix(true_labels, predicted_labels)
-plt.figure(figsize=(10,7))
+plt.figure(figsize=(10, 7))
 sns.heatmap(confusion_matrix_pretrained_cnn, annot=True, fmt='d', cmap='Blues')
 plt.xlabel('Predicted')
 plt.ylabel('True')
 plt.title('Confusion Matrix CNN')
 plt.show()
 
-
-model_path = 'InClasPreTrainedCNN_Model.h5'
+# save trained model
+model_path = os.path.join('trained_models', 'InClasPreTrainedCNN_Model.h5')
 torch.save(model.state_dict(), model_path)
 print(f'Model saved to {model_path}')
-

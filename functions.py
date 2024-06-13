@@ -1,17 +1,14 @@
-
 """
-Module: functions.py
+Module: All functions used in main.py file
 
-This module contains functions for photo preprocessing and feature extraction
-
+This module contains functions for photo preprocessing and feature extraction.
+These functions are used in main.py.
 """
 
 import os
-import shutil
 from random import randrange
 
 import cv2
-import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image, ImageFilter, ImageChops
 from skimage import measure
@@ -22,6 +19,7 @@ pillow_heif.register_heif_opener()
 
 
 """ Preprocessing of data functions """
+
 
 def augmentation_function(photo):
     """ Augmentation function to flip, rotate and crop photos """
@@ -71,34 +69,18 @@ def convert_heic_jpg(heic_folder):
 
     for heic_photo in os.listdir(heic_folder):
         if heic_photo.lower().endswith('.heic'):
-            # create paths for the HEIC and JPG files
             heic_file_path = os.path.join(heic_folder, heic_photo)
             jpg_file_path = os.path.join(heic_folder,
                                          heic_photo.replace('.HEIC', '.jpg'))
-            #print(heic_file_path)
-            #print(jpg_file_path)
             try:
-                image = Image.open(heic_file_path)
-                image.save(jpg_file_path, format='JPEG')
-                
+                photo = Image.open(heic_file_path)
+                photo.save(jpg_file_path, format='JPEG')
                 os.remove(heic_file_path)
                 print('Conversion successfull', heic_photo)
-            except Exception as e:
+            except Exception:
                 print('Error converting', heic_photo)
         else:
             print('No conversion needed')
-
-
-
-def highpass_filter(photo_path, lowpass_filtered_photo):
-    """ Highpass Gaussian to sharpen photo(Makander & Halalli(2015) """
-
-    photo = Image.open(photo_path)
-    highpass_filtered_photo = ImageChops.subtract(photo,
-                                                  lowpass_filtered_photo,
-                                                  scale=1,
-                                                  offset=2)
-    return highpass_filtered_photo
 
 
 def ignore_files(directory, files):
@@ -112,20 +94,18 @@ def lowpass_filter(photo_path, radius):
 
     photo = Image.open(photo_path)
     lowpass_filtered_photo = photo.filter(ImageFilter.GaussianBlur(radius))
+
     return lowpass_filtered_photo
 
 
 """ Extract features functions """
 
+
 def binary_photo(photo):
     """ Converts photo to binary photo """
 
     gray_photo = cv2.cvtColor(photo, cv2.COLOR_BGR2GRAY)
-
-    # you need to invert photo
     gray_inverted = cv2.bitwise_not(gray_photo)
-
-    # make photo fully black and white with cv2.threshold()
     _, binary = cv2.threshold(gray_inverted, 90, 255, cv2.THRESH_BINARY)
 
     return binary
@@ -142,8 +122,6 @@ def geometric_feature(photo_path):
     # load and convert photo to HSV
     photo = cv2.imread(photo_path)
     binary = binary_photo(photo)
-    # plt.imshow(binary, cmap='gray')
-    # plt.show()
 
     # label the foreground object (1) and exclude background (0)
     _, labels_binary = cv2.connectedComponents(binary)
@@ -188,27 +166,11 @@ def fourier(photo_path):
     # get binary photo
     binary = binary_photo(photo)
 
-    # show binary photo
-    # plt.imshow(binary, cmap='gray')
-
     # detecting the contours in an photo
     contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    #print(f'Number of contours found = {format(len(contours))}')
-
-    # read coloured image in for drawing the contours (otherwise the lines will be drawed in white)
-    # cv2.drawContours(img, contours, -1, (0,255,0),1)
-    # plt.figure(figsize=[10,10])
-    # plt.imshow(img[:,:,::-1])
-    # plt.axis("off")
-    # plt.show()
 
     # fourier transformation (https://docs.opencv.org/4.x/de/dbc/tutorial_py_fourier_transform.html)
-    # contour = max(contours, key=cv2.contourArea)
     contour = max(contours, key=cv2.contourArea)
-    #print(f'Number of contour after max area function = {format(len(contour))}')
-    # cv2.drawContours(img, contour, -1, (0,255,0), 5)
-    # plt.imshow(img[:,:,::-1])
-    # plt.show()
 
     fourier_contour = np.fft.fft2(contour)
     fourier_shift = np.fft.fftshift(fourier_contour)
@@ -218,7 +180,6 @@ def fourier(photo_path):
 
     spat_freq_1 = magnitude_spectrum_first_two_spat_freq[0][0][0]
     spat_freq_2 = magnitude_spectrum_first_two_spat_freq[0][0][1]
-    # print(spat_freq_1, spat_freq_2)
 
     return spat_freq_1, spat_freq_2
 
@@ -229,43 +190,29 @@ def minimum_rectangle_photo(photo_path):
     """
 
     photo = cv2.imread(photo_path)
-    # img = cv2.GaussianBlur(img, (5,5), 0)
     binary = binary_photo(photo)
 
     # get contours
     contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    # print(f'amount of contours found {len(contours)}')
-
     # get coordinates of minimum bounding rectangle
     if len(contours) > 0:
         contour = max(contours, key=cv2.contourArea)
-        #print(f'Number of contour after max area function = {format(len(contour))}')
-
         x_top_left, y_top_left, width, height = cv2.boundingRect(contour)
-
         cv2.rectangle(photo,
                       (x_top_left, y_top_left),
                       (x_top_left + width, y_top_left + height),
                       (0, 0, 255),
                       2)
-
         rectangle_photo = photo[y_top_left:y_top_left+height, x_top_left:x_top_left+width]
 
-        # display original image with rectangle
-        # plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-        # plt.title('Ímage with bounding Rectangle')
-        # plt.show()
-
         if rectangle_photo.size > 0:
-            # plt.imshow(rectangle_image)
-            # plt.title('Extracted Bouding Rectangle')
-            # plt.show()
             pass
         else:
             print('Rectangle photo is empty')
     else:
         print('No contours found.')
+
     return rectangle_photo
 
 
@@ -328,6 +275,7 @@ def color(photo_path):
     Extract color features of minimum rectangle background object
     """
     def lab_to_lch(lab_photo):
+        """ Convert LAB photos to LCH photos """
         luminence_lab, chrominance1_lab, chrominance2_lab = cv2.split(lab_photo)
         chrominance = np.sqrt(chrominance1_lab**2 + chrominance2_lab**2)
         hue = np.arctan2(chrominance2_lab, chrominance1_lab) * (180 / np.pi)
@@ -336,6 +284,7 @@ def color(photo_path):
         luminence_lab = luminence_lab.astype(np.float32)
         chrominance = chrominance.astype(np.float32)
         hue = hue.astype(np.float32)
+
         return cv2.merge((luminence_lab, chrominance, hue))
 
     # Read the photo
@@ -350,8 +299,6 @@ def color(photo_path):
     std_hue_hsv = np.std(hue_hsv)
     mean_sat_hsv = np.mean(saturation_hsv)
     std_sat_hsv = np.std(saturation_hsv)
-
-    # Display the original photo, HSV photo, and the individual channels
 
     # lab photo features
     lab_photo = cv2.cvtColor(photo, cv2.COLOR_BGR2LAB)
