@@ -24,24 +24,24 @@ register_heif_opener()
 
 # load photos and store in directory which is named after the class
 current_directory = os.getcwd()
-DATA_FOLDER_PATH = os.path.join(current_directory, 'final_dataset')
+DATA_FOLDER_PATH = os.path.join(current_directory, 'datasets/final_dataset')
 DATA_FOLDER_PATH = os.path.normpath(DATA_FOLDER_PATH).replace("\\", "/")
 
 # create augmentated directory which has same buildup as original directory
-if not os.path.exists(os.path.join(current_directory, 'processed_dataset')):
+if not os.path.exists(os.path.join(current_directory, 'datasets/processed_dataset')):
     shutil.copytree(DATA_FOLDER_PATH,
-                    os.path.join(current_directory, 'processed_dataset'),
+                    os.path.join(current_directory, 'datasets/processed_dataset'),
                     ignore=ignore_files)
 else:
-    for folder in os.listdir(os.path.join(current_directory, 'processed_dataset')):
-        folder_path = os.path.join(os.path.join(current_directory, 'processed_dataset'), folder)
+    for folder in os.listdir(os.path.join(current_directory, 'datasets/processed_dataset')):
+        folder_path = os.path.join(os.path.join(current_directory, 'datasets/processed_dataset'), folder)
         folder_path = os.path.normpath(folder_path)
         folder = os.listdir(folder_path)
         for photo in folder:
             photo_path = os.path.join(folder_path, photo)
             os.remove(photo_path)
 
-AUGMENT_DATA_FOLDER_PATH = os.path.join(current_directory, 'processed_dataset')
+AUGMENT_DATA_FOLDER_PATH = os.path.join(current_directory, 'datasets/processed_dataset')
 
 # go over all the folder and photos and convert heic to jpg
 species = os.listdir(DATA_FOLDER_PATH)
@@ -129,7 +129,7 @@ for specie in species:
             metadata.append(metadata_photo)
 
 # create csv file and reader object to read CSV file
-CSV_FILE = 'metadata_model.csv'
+CSV_FILE = 'annotation_files/metadata_model.csv'
 
 # put metadata in csv file
 with open(CSV_FILE, 'a', newline='', encoding="utf-8") as file:

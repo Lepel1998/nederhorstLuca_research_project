@@ -22,7 +22,10 @@ pillow_heif.register_heif_opener()
 
 
 def augmentation_function(photo):
-    """ Augmentation function to flip, rotate and crop photos """
+    """ 
+    Augmentation function to flip, rotate and crop photos 
+    (Kanisathan et al. 2021; Mikołajczyk & Grochowski, 2018; Shorten & Khoshgoftaar, 2019)
+    """
 
     resized_photo = photo.resize((227, 227))
     rot90 = resized_photo.rotate(90)
@@ -90,7 +93,10 @@ def ignore_files(directory, files):
 
 
 def lowpass_filter(photo_path, radius):
-    """ Lowpass Gaussian to smoothen photo/reduce noise(Makander & Halalli(2015) """
+    """ 
+    Lowpass Gaussian to smoothen photo/reduce noise 
+    (Makander & Halalli, 2015)
+    """
 
     photo = Image.open(photo_path)
     lowpass_filtered_photo = photo.filter(ImageFilter.GaussianBlur(radius))
@@ -113,10 +119,8 @@ def binary_photo(photo):
 
 def geometric_feature(photo_path):
     """
-        Wen, C., & Guyer, D. (2012). Image-based orchard insect automated
-        identification and classification method. Computers and electronics
-        in agriculture, 89, 110-115.
-        Global feature extraction used as this is shown to be working better.
+        Global feature extraction used as this is shown to be working better
+        (Wen & Guyer, 2012)
     """
 
     # load and convert photo to HSV
@@ -157,7 +161,9 @@ def geometric_feature(photo_path):
 
 def fourier(photo_path):
     """
-    https://www.youtube.com/watch?v=JfaZNiEbreE&list=PLCeWwpzjQu9gc9C9-iZ9WTFNGhIq4-L1X
+    Get spatial frequencies for contour detection
+    (Bleed AI Academy, 2021; Wen & Guyer, 2012)
+    Fourier transformation (OpenCV, n.d.A)
     """
 
     # load photo
@@ -169,7 +175,7 @@ def fourier(photo_path):
     # detecting the contours in an photo
     contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    # fourier transformation (https://docs.opencv.org/4.x/de/dbc/tutorial_py_fourier_transform.html)
+    # fourier transformation
     contour = max(contours, key=cv2.contourArea)
 
     fourier_contour = np.fft.fft2(contour)
@@ -186,7 +192,7 @@ def fourier(photo_path):
 
 def minimum_rectangle_photo(photo_path):
     """
-        https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+    Get minimal rectangle photo (OpenCV, n.d.B)
     """
 
     photo = cv2.imread(photo_path)
@@ -218,7 +224,7 @@ def minimum_rectangle_photo(photo_path):
 
 def invariant_moments(photo_path):
     """
-    https://www.tutorialspoint.com/how-to-compute-hu-moments-of-an-image-in-opencv-python
+    Get invariant moments (Wen & Guyer, 2012; Tutorialspoint, n.d.)
     """
     rect_photo = minimum_rectangle_photo(photo_path)
     gray_rect_photo = cv2.cvtColor(rect_photo, cv2.COLOR_BGR2GRAY)
@@ -237,7 +243,7 @@ def invariant_moments(photo_path):
 
 def texture(photo_path):
     """
-    took avarage of texture features to add it to the csv file
+    Take avarage of texture features (Wen & Guyer, 2012)
     """
 
     photo = cv2.imread(photo_path, cv2.IMREAD_GRAYSCALE)
