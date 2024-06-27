@@ -77,7 +77,7 @@ model.classifier = nn.Sequential(
 
 # define loss function and optimizer
 loss_criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.classifier.parameters(), lr=1e-4)
+optimizer = optim.Adam(model.classifier.parameters(), lr=0.0001)
 
 # lists to store training history
 train_losses = []
@@ -85,7 +85,7 @@ train_accuracies = []
 
 # set the number of epochs
 # an epoch is a complete pass through the entire training dataset
-EPOCH_AMOUNT = 1
+EPOCH_AMOUNT = 20
 
 # training loop
 start_time_cnn = time.time()
@@ -120,7 +120,7 @@ for param in model.features[-20:].parameters():
     param.requires_grad = True
 
 # define a new optimizer for fine-tuning
-optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=1e-5)
+optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=0.00001)
 
 FINE_TUNE_EPOCHS = 1
 TOTAL_EPOCHS = EPOCH_AMOUNT + FINE_TUNE_EPOCHS

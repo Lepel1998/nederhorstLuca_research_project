@@ -40,18 +40,22 @@ print(f'Inladen vanuit folder geluk!: {IMAGE_DATASET_PATH}')
 dataset_iterator = image_dataset.as_numpy_iterator()
 batch = dataset_iterator.next()
 
+# print classes print corresponding labels
+class_names = image_dataset.class_names
+print(f'Class names and corresponding labels:')
+for index, class_name in enumerate(class_names):
+    print(f'Label {index}: {class_name}')
+
 # preprocess data to scale values between 0 and 1 per pixel
 process_image_dataset = image_dataset.map(lambda x, y: (x/227, y))
 scaled_iterator = process_image_dataset.as_numpy_iterator()
 batch = scaled_iterator.next()
 
 # split data in train, validate and test datasets
-train_size = int(len(process_image_dataset)*0.7)
+train_size = int(len(process_image_dataset)*0.8)
 train_dataset = process_image_dataset.take(train_size)
-validate_size = int(len(process_image_dataset)*0.2)
-validate_dataset = process_image_dataset.skip(train_size).take(validate_size)
-test_size = int(len(process_image_dataset)*0.1)
-test_dataset = process_image_dataset.skip(train_size + validate_size).take(test_size)
+test_size = int(len(process_image_dataset)*0.2)
+test_dataset = process_image_dataset.skip(train_size).take(test_size)
 
 # build convolutional neural network using Sequential from Tensorflow Keras APi
 model = Sequential([
@@ -82,7 +86,6 @@ tb_callback = tf.keras.callbacks.TensorBoard(log_dir=LOG_PROCESS)
 start_time_cnn = time.time()
 history = model.fit(train_dataset,
                     epochs=20,
-                    validation_data=validate_dataset,
                     callbacks=[tb_callback])
 end_time_cnn = time.time()
 train_time_cnn = end_time_cnn - start_time_cnn
@@ -90,16 +93,16 @@ print(f'Training time CNN: {train_time_cnn}')
 
 # save trainedmodel
 model.save(os.path.join(os.path.dirname(__file__), '..',
+                        'trained_models',
                         'InClasCNN_Model.h5'))
-new_model = load_model(os.path.join(os.path.dirname(__file__), '..', 
+new_model = load_model(os.path.join(os.path.dirname(__file__), '..',
+                                    'trained_models', 
                                     'InClasCNN_Model.h5'))
 
 # plot training history: loss an accuracy
 plt.figure()
 plt.plot(history.history['loss'], 'r', label='loss')
-plt.plot(history.history['val_loss'], 'm', label='val_loss')
 plt.plot(history.history['accuracy'], 'b', label='accuracy')
-plt.plot(history.history['val_accuracy'], 'g', label='val_accuracy')
 plt.suptitle('Loss and Accuracy', fontsize=20)
 plt.legend(loc="upper right")
 plt.show()
@@ -125,7 +128,6 @@ for batch in test_dataset.as_numpy_iterator():
 
     # get predicted class
     predicted_class = np.argmax(predicted_label, axis=1)
-    print(f'Predicted class:{predicted_class}')
 
     # convert predicted class to one-hot-encoding
     predicted_class_hot_label = tf.keras.utils.to_categorical(predicted_class,

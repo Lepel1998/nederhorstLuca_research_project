@@ -1,5 +1,5 @@
 """
-Module: Pretrained Visual Transformers Feature Extraction (Error)
+Module: Pretrained Visual Transformers Feature Extraction (Error -> too high computational resources needed)
 
 Pretrained model used to train SVM, KNN and NB (Pretrained model: Huggingsface, n.d.)
 

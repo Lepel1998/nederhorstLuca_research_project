@@ -163,7 +163,7 @@ def fourier(photo_path):
     """
     Get spatial frequencies for contour detection
     (Bleed AI Academy, 2021; Wen & Guyer, 2012)
-    Fourier transformation (OpenCV, n.d.A)
+    Fourier transformation (OpenCV, n.d.)
     """
 
     # load photo
